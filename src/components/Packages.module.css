@@ -72,52 +72,59 @@
 /* Card */
 .card {
   background: #ffffff;
-  border: 1px solid var(--gray-200);
+  border: 1px solid rgba(10, 10, 10, 0.06);
+  border-radius: 16px;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-              box-shadow 0.4s ease;
+              box-shadow 0.4s ease,
+              border-color 0.4s ease;
 }
 
 .card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 24px 48px rgba(10, 10, 10, 0.08);
+  border-color: rgba(10, 10, 10, 0.12);
 }
 
 .cardImage {
   position: relative;
-  height: 220px;
+  height: 250px;
   overflow: hidden;
-  border-bottom: 1px solid var(--gray-200);
 }
 
 .image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .card:hover .image {
-  transform: scale(1.05);
+  transform: scale(1.06);
 }
 
 .cardTag {
   position: absolute;
-  top: 16px;
-  left: 16px;
+  top: 20px;
+  left: 20px;
   font-family: 'Inter', sans-serif;
   font-size: 9px;
-  font-weight: 600;
-  letter-spacing: 0.15em;
+  font-weight: 500;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: #ffffff;
-  background: #0a0a0a;
-  padding: 6px 12px;
+  color: #0a0a0a;
+  background: rgba(250, 250, 250, 0.9);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 8px 16px;
+  border-radius: 30px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
 }
 
 .cardBody {
-  padding: 28px;
+  padding: 32px 28px 28px;
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -126,25 +133,24 @@
 .cardDuration {
   font-family: 'Inter', sans-serif;
   font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
+  font-weight: 600;
+  letter-spacing: 0.12em;
   color: #888888;
   text-transform: uppercase;
-  margin-bottom: 12px;
-  border-bottom: 1px solid var(--gray-200);
-  padding-bottom: 8px;
+  margin-bottom: 14px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  padding-bottom: 10px;
 }
 
 .cardTitle {
-  font-family: 'Inter', sans-serif;
-  font-size: 13px;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 18px;
   font-weight: 600;
   color: #0a0a0a;
-  line-height: 1.45;
+  line-height: 1.35;
   margin-bottom: 12px;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  min-height: 48px;
+  letter-spacing: -0.01em;
+  min-height: 52px;
   display: flex;
   align-items: center;
 }
@@ -153,7 +159,7 @@
   font-family: 'Inter', sans-serif;
   font-size: 12px;
   font-weight: 400;
-  color: #666666;
+  color: #6a6a6a;
   line-height: 1.6;
   margin-top: 8px;
   margin-bottom: 24px;
@@ -163,11 +169,11 @@
 /* Inclusions */
 .inclusions {
   display: flex;
-  justify-content: space-around;
-  padding: 16px 0;
-  border-top: 1px solid var(--gray-200);
-  border-bottom: 1px solid var(--gray-200);
-  margin-bottom: 24px;
+  justify-content: space-between;
+  padding: 18px 12px;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  margin-bottom: 28px;
 }
 
 .inclusion {
@@ -178,21 +184,28 @@
 }
 
 .incCircle {
-  background: var(--gray-100);
-  width: 32px;
-  height: 32px;
+  color: #bfa370;
+  background: rgba(191, 163, 112, 0.08);
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 13px;
+  transition: all 0.3s ease;
+}
+
+.card:hover .incCircle {
+  transform: translateY(-2px);
+  background: rgba(191, 163, 112, 0.15);
+  box-shadow: 0 4px 12px rgba(191, 163, 112, 0.1);
 }
 
 .incLabel {
   font-family: 'Inter', sans-serif;
   font-size: 9px;
   font-weight: 500;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #888888;
 }
@@ -204,45 +217,49 @@
 }
 
 .btnEnquire {
-  flex: 1;
+  flex: 1.2;
   text-align: center;
-  background: var(--black);
-  color: var(--white);
+  background: #0a0a0a;
+  color: #fafafa;
+  border: 1px solid #0a0a0a;
   font-family: 'Inter', sans-serif;
   font-size: 11px;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  padding: 12px;
-  transition: var(--transition);
+  padding: 14px 20px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
 }
 
 .btnEnquire:hover {
-  background: var(--gray-800);
+  background: transparent;
+  color: #0a0a0a;
 }
 
 .btnWhatsapp {
   flex: 1;
   text-align: center;
   background: #ffffff;
-  color: var(--black);
-  border: 1px solid var(--gray-300);
+  color: #25D366;
+  border: 1px solid #25D366;
   font-family: 'Inter', sans-serif;
   font-size: 11px;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  padding: 11px;
+  padding: 13px 20px;
+  border-radius: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 6px;
-  transition: var(--transition);
+  transition: all 0.3s ease;
 }
 
 .btnWhatsapp:hover {
-  border-color: var(--black);
-  background: var(--gray-100);
+  background: #25D366;
+  color: #ffffff;
 }
 
 @media (max-width: 1100px) {

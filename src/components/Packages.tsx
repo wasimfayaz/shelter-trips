@@ -86,19 +86,37 @@ export default function Packages() {
 
                 <div className={styles.inclusions}>
                   <div className={styles.inclusion}>
-                    <div className={styles.incCircle}>🏨</div>
+                    <div className={styles.incCircle}>
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M2 22V10a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12" />
+                        <path d="M2 14h20M7 8V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v3M10 14v4M14 14v4" />
+                      </svg>
+                    </div>
                     <span className={styles.incLabel}>Hotel</span>
                   </div>
                   <div className={styles.inclusion}>
-                    <div className={styles.incCircle}>✨</div>
+                    <div className={styles.incCircle}>
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+                        <circle cx="12" cy="12" r="4" />
+                      </svg>
+                    </div>
                     <span className={styles.incLabel}>Fun</span>
                   </div>
                   <div className={styles.inclusion}>
-                    <div className={styles.incCircle}>🍽️</div>
+                    <div className={styles.incCircle}>
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2M7 2v6M12 12V2h1c2.4 0 4 2 4 4v14c0 1.1-.9 2-2 2h-3v-4H9v4H6c-1.1 0-2-.9-2-2v-4" />
+                      </svg>
+                    </div>
                     <span className={styles.incLabel}>Meal</span>
                   </div>
                   <div className={styles.inclusion}>
-                    <div className={styles.incCircle}>🚗</div>
+                    <div className={styles.incCircle}>
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3C13 6.8 11.5 6 10 6H4c-1.1 0-2 .9-2 2v8c0 .6.4 1 1 1h2m10 0a3 3 0 1 1-6 0 3 3 0 0 1 6 0zm-8 0a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                      </svg>
+                    </div>
                     <span className={styles.incLabel}>Cab</span>
                   </div>
                 </div>
