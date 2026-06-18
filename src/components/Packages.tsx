@@ -7,7 +7,7 @@ const packagesList = [
     title: 'ALL ABOUT SHELTER | HONEYMOON SPECIAL',
     routing: '2N Srinagar • 1N Gulmarg • 2N Pahalgam • 1N Houseboat',
     tag: 'Honeymoon Special',
-    image: 'https://images.pexels.com/photos/10701431/pexels-photo-10701431.jpeg'
+    image: 'https://images.pexels.com/photos/7113990/pexels-photo-7113990.jpeg'
   },
   {
     id: 'abc-valley',
@@ -31,7 +31,7 @@ const packagesList = [
     title: 'SHELTER STORY | FREE SHIKARA RIDE',
     routing: '1N Srinagar • 2N Houseboat',
     tag: 'Shikara Special',
-    image: 'https://images.pexels.com/photos/7113990/pexels-photo-7113990.jpeg'
+    image: 'https://images.pexels.com/photos/10701431/pexels-photo-10701431.jpeg'
   },
   {
     id: 'supper-chaijai',
