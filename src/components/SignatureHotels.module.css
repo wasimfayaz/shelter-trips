@@ -48,34 +48,57 @@
   text-transform: uppercase;
 }
 
-.logosGrid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+.marqueeContainer {
+  overflow: hidden;
+  width: 100%;
+  white-space: nowrap;
+  position: relative;
+  padding: 10px 0;
+  mask-image: linear-gradient(to right, transparent, white 15%, white 85%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, white 15%, white 85%, transparent);
+}
+
+.marqueeTrack {
+  display: inline-flex;
   align-items: center;
-  gap: 48px;
-  max-width: 1100px;
-  margin: 0 auto;
+  gap: 64px;
+  animation: logoMarquee 45s linear infinite;
+}
+
+.marqueeContainer:hover .marqueeTrack {
+  animation-play-state: paused;
+}
+
+@keyframes logoMarquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 
 .logoItem {
-  height: 60px;
-  width: 170px;
-  display: flex;
+  height: 80px;
+  width: 190px;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  opacity: 0.65;
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
 }
 
 .logoItem:hover {
-  opacity: 0.95;
-  transform: translateY(-2px);
+  transform: scale(1.08);
 }
 
-.logoSvg {
-  max-height: 100%;
+.logoImage {
   max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  opacity: 0.95;
+  filter: none;
+  transition: opacity 0.3s ease;
+}
+
+.logoItem:hover .logoImage {
+  opacity: 1;
 }
 
 /* Grid */
