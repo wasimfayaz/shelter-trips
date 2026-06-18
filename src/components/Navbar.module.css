@@ -1,0 +1,249 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 24px 0;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.nav.scrolled {
+  background: rgba(250, 250, 250, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: baseline;
+  gap: 3px;
+  text-decoration: none;
+}
+
+.logoText {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: #fafafa;
+  letter-spacing: -0.02em;
+  transition: color 0.4s;
+}
+
+.nav.scrolled .logoText {
+  color: #0a0a0a;
+}
+
+.logoSub {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(250, 250, 250, 0.6);
+  transition: color 0.4s;
+}
+
+.nav.scrolled .logoSub {
+  color: #9a9a9a;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.link {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: rgba(250, 250, 250, 0.85);
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: currentColor;
+  transition: width 0.3s ease;
+}
+
+.link:hover::after {
+  width: 100%;
+}
+
+.link:hover {
+  color: #fafafa;
+}
+
+.nav.scrolled .link {
+  color: #4a4a4a;
+}
+
+.nav.scrolled .link:hover {
+  color: #0a0a0a;
+}
+
+.navActions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.ctaBtn {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #0a0a0a;
+  background: #fafafa;
+  padding: 12px 24px;
+  text-decoration: none;
+  transition: all 0.3s;
+  border: 1px solid transparent;
+  border-radius: 30px;
+}
+
+.ctaBtn:hover {
+  background: transparent;
+  color: #fafafa;
+  border-color: rgba(250, 250, 250, 0.6);
+}
+
+.nav.scrolled .ctaBtn {
+  background: #0a0a0a;
+  color: #fafafa;
+  border-color: #0a0a0a;
+}
+
+.nav.scrolled .ctaBtn:hover {
+  background: transparent;
+  color: #0a0a0a;
+}
+
+/* Burger */
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 4px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.burger span {
+  display: block;
+  width: 24px;
+  height: 1.5px;
+  background: #fafafa;
+  transition: all 0.3s;
+  transform-origin: center;
+}
+
+.nav.scrolled .burger span {
+  background: #0a0a0a;
+}
+
+.burgerActive span:nth-child(1) {
+  transform: translateY(6.5px) rotate(45deg);
+}
+.burgerActive span:nth-child(2) {
+  opacity: 0;
+}
+.burgerActive span:nth-child(3) {
+  transform: translateY(-6.5px) rotate(-45deg);
+}
+
+/* Mobile menu */
+.mobileMenu {
+  display: none;
+  flex-direction: column;
+  gap: 0;
+  background: #fafafa;
+  border-top: 1px solid #e8e8e8;
+  padding: 24px 40px 32px;
+}
+
+.mobileLink {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: #0a0a0a;
+  text-decoration: none;
+  padding: 14px 0;
+  border-bottom: 1px solid #f0f0f0;
+  letter-spacing: 0.02em;
+  transition: color 0.2s;
+}
+
+.mobileLink:hover {
+  color: #6a6a6a;
+}
+
+.mobileCta {
+  display: inline-block;
+  margin-top: 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #fafafa;
+  background: #0a0a0a;
+  padding: 16px 32px;
+  text-decoration: none;
+  text-align: center;
+  transition: background 0.3s;
+}
+
+.mobileCta:hover {
+  background: #2a2a2a;
+}
+
+@media (max-width: 900px) {
+  .links {
+    display: none;
+  }
+  .ctaBtn {
+    display: none;
+  }
+  .burger {
+    display: flex;
+  }
+  .mobileMenu {
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 24px;
+  }
+  .mobileMenu {
+    padding: 24px 24px 32px;
+  }
+}

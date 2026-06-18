@@ -1,0 +1,247 @@
+.hotels {
+  background: #fafafa;
+  padding: 120px 0;
+  border-top: 1px solid var(--gray-200);
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 80px;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #6a6a6a;
+  margin-bottom: 24px;
+}
+
+.labelLine {
+  display: block;
+  width: 32px;
+  height: 1px;
+  background: #9a9a9a;
+}
+
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 40px;
+  margin-bottom: 64px;
+}
+
+.title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(34px, 4vw, 52px);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: #0a0a0a;
+}
+
+.title em {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  color: #6a6a6a;
+  line-height: 1.8;
+  max-width: 360px;
+  flex-shrink: 0;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+/* Card */
+.card {
+  background: #ffffff;
+  border: 1px solid var(--gray-200);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              box-shadow 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+}
+
+.cardImage {
+  position: relative;
+  height: 260px;
+  overflow: hidden;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.card:hover .image {
+  transform: scale(1.05);
+}
+
+.cardTag {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  font-family: 'Inter', sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: #0a0a0a;
+  padding: 6px 12px;
+}
+
+.cardBody {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.cardTitle {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: #0a0a0a;
+  margin-bottom: 16px;
+  line-height: 1.25;
+}
+
+.cardDesc {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: #555555;
+  line-height: 1.7;
+  margin-bottom: 24px;
+  flex: 1;
+}
+
+/* Meta Section */
+.cardMeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding: 16px 0 0;
+  border-top: 1px solid var(--gray-200);
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.locIcon {
+  font-size: 14px;
+}
+
+.locText {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: #666666;
+  text-transform: uppercase;
+}
+
+.price {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.priceLabel {
+  font-family: 'Inter', sans-serif;
+  font-size: 9px;
+  font-weight: 500;
+  color: #999999;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.priceValue {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: #0a0a0a;
+  line-height: 1.1;
+  margin-top: 2px;
+}
+
+/* Button */
+.btnBook {
+  display: block;
+  text-align: center;
+  background: var(--black);
+  color: var(--white);
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 14px;
+  transition: var(--transition);
+}
+
+.btnBook:hover {
+  background: var(--gray-800);
+}
+
+@media (max-width: 1100px) {
+  .container {
+    padding: 0 48px;
+  }
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 24px;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .headerRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+  .hotels {
+    padding: 80px 0;
+  }
+  .cardImage {
+    height: 220px;
+  }
+}

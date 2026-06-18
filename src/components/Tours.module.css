@@ -1,0 +1,275 @@
+.tours {
+  background: #f5f5f5;
+  padding-bottom: 120px;
+}
+
+.header {
+  padding: 120px 0 64px;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 80px;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #6a6a6a;
+  margin-bottom: 24px;
+}
+
+.labelLine {
+  display: block;
+  width: 32px;
+  height: 1px;
+  background: #9a9a9a;
+}
+
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 40px;
+}
+
+.title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(34px, 4vw, 52px);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: #0a0a0a;
+}
+
+.title em {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  color: #6a6a6a;
+  line-height: 1.8;
+  max-width: 360px;
+  flex-shrink: 0;
+}
+
+/* Grid */
+.grid {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 80px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: #e8e8e8;
+  border: 1px solid #e8e8e8;
+}
+
+/* Card */
+.card {
+  background: #fafafa;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  cursor: default;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  z-index: 2;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+}
+
+.cardImage {
+  position: relative;
+  height: 240px;
+  overflow: hidden;
+}
+
+.cardImage :global(.imagePlaceholder) {
+  transition: border-color var(--transition);
+}
+
+.card:hover .cardImage :global(.imagePlaceholder) {
+  border-color: var(--gray-400);
+}
+
+.cardOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(10,10,10,0.5) 0%, transparent 60%);
+}
+
+.cardTag {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  font-family: 'Inter', sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #fafafa;
+  background: rgba(10, 10, 10, 0.6);
+  backdrop-filter: blur(8px);
+  padding: 6px 12px;
+}
+
+.cardBody {
+  padding: 28px 28px 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.cardMeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.cardSubtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  color: #9a9a9a;
+  text-transform: uppercase;
+}
+
+.cardDuration {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  color: #9a9a9a;
+}
+
+.cardTitle {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: #0a0a0a;
+  letter-spacing: -0.01em;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.highlights {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+  flex: 1;
+}
+
+.highlight {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  color: #4a4a4a;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  line-height: 1.4;
+}
+
+.dot {
+  color: #9a9a9a;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.cardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.price {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.priceNum {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #0a0a0a;
+  letter-spacing: -0.01em;
+  line-height: 1;
+}
+
+.priceNote {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  color: #9a9a9a;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.cardBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #0a0a0a;
+  text-decoration: none;
+  border-bottom: 1px solid #0a0a0a;
+  padding-bottom: 2px;
+  transition: all 0.3s;
+}
+
+.cardBtn:hover {
+  color: #6a6a6a;
+  border-color: #6a6a6a;
+}
+
+@media (max-width: 1100px) {
+  .container, .grid {
+    padding: 0 48px;
+  }
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .container, .grid {
+    padding: 0 24px;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .headerRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .header {
+    padding: 80px 0 40px;
+  }
+  .tours {
+    padding-bottom: 80px;
+  }
+}
