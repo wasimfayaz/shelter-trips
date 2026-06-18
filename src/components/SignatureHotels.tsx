@@ -22,7 +22,8 @@ const partners = [
   { id: 'welcomheritage-gurkha', name: 'WelcomHeritage Gurkha Houseboats', img: 'https://dialusback.com/wp-content/uploads/2024/08/welcome-heritage-gurkha-.png' },
   { id: 'zaffar-houseboats', name: 'Zaffar Houseboats', img: 'https://dialusback.com/wp-content/uploads/2024/08/Logo-new-Zaffer-Hb.png' },
   { id: 'jacqueline-houseboats', name: 'Jacqueline Houseboats', img: 'https://dialusback.com/wp-content/uploads/2024/08/Jaqueline-new-logo.png' },
-  { id: 'shamas-residency', name: 'The Shamas Residency', img: 'https://theshamasresidency.com/images/uploads/logos/3040_logo_shamas.png' }
+  { id: 'shamas-residency', name: 'The Shamas Residency', img: 'https://theshamasresidency.com/images/uploads/logos/3040_logo_shamas.png' },
+  { id: 'instagram-partner', name: 'Partner Logo', img: 'https://instagram.fsxr1-2.fna.fbcdn.net/v/t51.2885-19/490491913_1323206568940493_2355601723810509700_n.jpg?stp=dst-jpg_s150x150_tt6&cb=8438d1d6-89aba764&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby44ODEuYzIifQ&_nc_ht=instagram.fsxr1-2.fna.fbcdn.net&_nc_cat=105&_nc_oc=Q6cZ2gFYWcFy7qH2xgbjSUoyDXRElOtSxfkwASlVxNhNyZgrPC-Pp5tRTK9JNLVkS6oii7I&_nc_ohc=fU7tZb6wi7YQ7kNvwGzipcj&_nc_gid=z-gXN_V5TTXClRPtE_8-lA&edm=AP4sbd4BAAAA&ccb=7-5&oh=00_Af_BSssEIIYsLGUim4-yJZEsexwt6U8_6UpOt0bLIhkgWQ&oe=6A39A45D&_nc_sid=7a9f4b' }
 ];
 
 export default function SignatureHotels() {
