@@ -1,0 +1,136 @@
+.stickyContainer {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-end;
+  pointer-events: none;
+}
+
+.stickyBtn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  text-decoration: none;
+  border-radius: 50px;
+  height: 50px;
+  min-width: 50px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  overflow: hidden;
+  pointer-events: auto;
+  position: relative;
+  cursor: pointer;
+}
+
+.iconWrapper {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.label {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  opacity: 0;
+  max-width: 0;
+  white-space: nowrap;
+  transition: max-width 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.3s ease, padding 0.4s ease;
+  line-height: 1;
+}
+
+.stickyBtn:hover .label {
+  opacity: 1;
+  max-width: 250px;
+  padding-left: 20px;
+  padding-right: 4px;
+}
+
+.stickyBtn:hover {
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.22);
+}
+
+.stickyBtn:hover .iconWrapper {
+  transform: scale(1.1);
+}
+
+.callBtn {
+  background: #0a0a0a;
+  color: #fafafa;
+  border: 1px solid rgba(250, 250, 250, 0.1);
+}
+
+.callBtn .iconWrapper {
+  color: #fafafa;
+}
+
+.callBtn .label {
+  color: #fafafa;
+}
+
+.whatsappBtn {
+  background: #25D366;
+  color: #ffffff;
+  border: 1px solid rgba(37, 211, 102, 0.1);
+}
+
+.whatsappBtn .iconWrapper {
+  color: #ffffff;
+}
+
+.whatsappBtn .label {
+  color: #ffffff;
+}
+
+/* Animations & pulses */
+.whatsappBtn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50px;
+  box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
+  animation: pulse 2s infinite;
+  pointer-events: none;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+@media (max-width: 768px) {
+  .stickyContainer {
+    bottom: 24px;
+    right: 24px;
+    gap: 10px;
+  }
+  .stickyBtn {
+    height: 48px;
+    min-width: 48px;
+  }
+  .iconWrapper {
+    width: 48px;
+    height: 48px;
+  }
+  /* On touch/mobile devices, disable slide-out text to avoid blocking UX */
+  .stickyBtn:hover .label {
+    opacity: 0;
+    max-width: 0;
+    padding-left: 0;
+  }
+}

@@ -108,7 +108,7 @@ export default function Packages() {
                     Enquire Now
                   </a>
                   <a 
-                    href="https://wa.me/917006655655" 
+                    href="https://wa.me/919103662018" 
                     className={styles.btnWhatsapp} 
                     target="_blank" 
                     rel="noopener noreferrer"
