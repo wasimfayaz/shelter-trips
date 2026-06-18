@@ -61,8 +61,8 @@
 .marqueeTrack {
   display: inline-flex;
   align-items: center;
-  gap: 64px;
-  animation: logoMarquee 45s linear infinite;
+  gap: 80px;
+  animation: logoMarquee 55s linear infinite;
 }
 
 .marqueeContainer:hover .marqueeTrack {
@@ -75,8 +75,8 @@
 }
 
 .logoItem {
-  height: 80px;
-  width: 190px;
+  height: 120px;
+  width: 240px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
