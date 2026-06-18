@@ -14,7 +14,15 @@ const partners = [
   { id: 'royal-castle', name: 'Hotel Royal Castle', img: 'https://dialusback.com/wp-content/uploads/2024/08/Royal-Castle-newooooo.png' },
   { id: 'rosewood', name: 'Rosewood Hotel', img: 'https://dialusback.com/wp-content/uploads/2024/08/Rosewood-newrtyuiioo.png' },
   { id: 'royal-park', name: 'Hotel Royal Park', img: 'https://dialusback.com/wp-content/uploads/2024/08/Royal-Park-.png' },
-  { id: 'wwr', name: 'WelcomHeritage / WWR', img: 'https://dialusback.com/wp-content/uploads/2024/08/wwr.png' }
+  { id: 'wwr', name: 'WelcomHeritage / WWR', img: 'https://dialusback.com/wp-content/uploads/2024/08/wwr.png' },
+  { id: 'eden-resort', name: 'Eden Resort', img: 'https://dialusback.com/wp-content/uploads/2024/08/Eden-Resort.png' },
+  { id: 'hotel-affarwat', name: 'Hotel Affarwat Gulmarg', img: 'https://dialusback.com/wp-content/uploads/2024/08/Hotel-Affervat-Gulmarg.png' },
+  { id: 'pahalgam-hotel', name: 'Pahalgam Hotel', img: 'https://dialusback.com/wp-content/uploads/2024/08/Pahalgam-Hotel.png' },
+  { id: 'mount-view', name: 'Mount View Pahalgam', img: 'https://dialusback.com/wp-content/uploads/2024/08/Mount-View-pahalgam.png' },
+  { id: 'welcomheritage-gurkha', name: 'WelcomHeritage Gurkha Houseboats', img: 'https://dialusback.com/wp-content/uploads/2024/08/welcome-heritage-gurkha-.png' },
+  { id: 'zaffar-houseboats', name: 'Zaffar Houseboats', img: 'https://dialusback.com/wp-content/uploads/2024/08/Logo-new-Zaffer-Hb.png' },
+  { id: 'jacqueline-houseboats', name: 'Jacqueline Houseboats', img: 'https://dialusback.com/wp-content/uploads/2024/08/Jaqueline-new-logo.png' },
+  { id: 'shamas-residency', name: 'The Shamas Residency', img: 'https://theshamasresidency.com/images/uploads/logos/3040_logo_shamas.png' }
 ];
 
 export default function SignatureHotels() {
