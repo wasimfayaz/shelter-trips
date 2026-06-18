@@ -1,6 +1,6 @@
 .hotels {
   background: #fafafa;
-  padding: 120px 0;
+  padding: 80px 0;
   border-top: 1px solid var(--gray-200);
 }
 
@@ -12,9 +12,7 @@
 
 .partnersSection {
   text-align: center;
-  margin-bottom: 72px;
-  padding-bottom: 54px;
-  border-bottom: 1px solid var(--gray-200);
+  padding: 12px 0;
 }
 
 .partnersLabel {

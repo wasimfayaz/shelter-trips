@@ -1,62 +1,5 @@
 import styles from './SignatureHotels.module.css';
 
-const hotelList = [
-  {
-    id: 'radisson-collection-srinagar',
-    title: 'Radisson Collection Hotel & Spa, Riverfront Srinagar',
-    location: 'Rajbagh, Srinagar',
-    desc: 'A luxurious riverside sanctuary blending high-end modern amenities with traditional Kashmiri architecture, overlooking the Jhelum River.',
-    price: 'FROM 14,999',
-    tag: '5-Star Luxury',
-    image: 'https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg'
-  },
-  {
-    id: 'heevan-resort-pahalgam',
-    title: 'Heevan Resort, Pahalgam',
-    location: 'Lidder Valley, Pahalgam',
-    desc: 'Nestled on the banks of the rushing Lidder River, Heevan Resort offers cozy wood-paneled cottages, traditional Kashmiri cuisine, and pine-forest views.',
-    price: 'FROM 9,999',
-    tag: 'Ahad Resorts',
-    image: 'https://images.pexels.com/photos/2034335/pexels-photo-2034335.jpeg'
-  },
-  {
-    id: 'snow-land-gulmarg',
-    title: 'Hotel Snow Land, Gulmarg',
-    location: 'Near Gondola, Gulmarg',
-    desc: 'Located close to the Gulmarg Gondola, offering centrally heated luxury suites, beautiful winter terrace dining, and direct access to ski slopes.',
-    price: 'FROM 11,999',
-    tag: 'Snow Land Group',
-    image: 'https://images.pexels.com/photos/975761/pexels-photo-975761.jpeg'
-  },
-  {
-    id: 'the-dewan-srinagar',
-    title: 'The Dewan, Srinagar',
-    location: 'Boulevard Road, Srinagar',
-    desc: 'A premium boutique hotel featuring exquisite Kashmiri craftsmanship, royal-themed suites, and close proximity to the iconic Dal Lake.',
-    price: 'FROM 7,499',
-    tag: 'Boutique Stay',
-    image: 'https://images.pexels.com/photos/262047/pexels-photo-262047.jpeg'
-  },
-  {
-    id: 'heevan-retreat-gulmarg',
-    title: 'Heevan Retreat, Gulmarg',
-    location: 'Meadow Walk, Gulmarg',
-    desc: 'A cozy boutique retreat providing heated comfort, panoramic mountain vistas, and elegant dining within Gulmarg’s alpine landscape.',
-    price: 'FROM 10,499',
-    tag: 'Ahad Resorts',
-    image: 'https://images.pexels.com/photos/1685144/pexels-photo-1685144.jpeg'
-  },
-  {
-    id: 'shelter-group-houseboats',
-    title: 'The Shelter Group of Houseboats',
-    location: 'Dal Lake, Srinagar',
-    desc: 'Traditional floating palaces featuring hand-carved cedar wood rooms, classic Kashmiri carpets, and private balconies overlooking the tranquil waters.',
-    price: 'FROM 8,999',
-    tag: 'Floating Luxury',
-    image: 'https://images.pexels.com/photos/10701431/pexels-photo-10701431.jpeg'
-  }
-];
-
 export default function SignatureHotels() {
   return (
     <section className={styles.hotels} id="hotels">
@@ -110,38 +53,6 @@ export default function SignatureHotels() {
               </svg>
             </div>
           </div>
-        </div>
-
-        <div className={styles.grid}>
-          {hotelList.map((hotel, index) => (
-            <article key={hotel.id} className={`${styles.card} reveal ${index % 3 === 0 ? '' : 'revealDelay' + (index % 3)}`} id={`hotel-${hotel.id}`}>
-              <div className={styles.cardImage}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={hotel.image} alt={hotel.title} className={styles.image} />
-                <span className={styles.cardTag}>{hotel.tag}</span>
-              </div>
-
-              <div className={styles.cardBody}>
-                <h3 className={styles.cardTitle}>{hotel.title}</h3>
-                <p className={styles.cardDesc}>{hotel.desc}</p>
-                
-                <div className={styles.cardMeta}>
-                  <div className={styles.location}>
-                    <span className={styles.locIcon}>📍</span>
-                    <span className={styles.locText}>{hotel.location}</span>
-                  </div>
-                  <div className={styles.price}>
-                    <span className={styles.priceLabel}>Rates from</span>
-                    <span className={styles.priceValue}>₹{hotel.price.replace('FROM ', '')}</span>
-                  </div>
-                </div>
-
-                <a href="#contact" className={styles.btnBook} id={`hotel-book-${hotel.id}`}>
-                  Book Your Stay
-                </a>
-              </div>
-            </article>
-          ))}
         </div>
       </div>
     </section>
