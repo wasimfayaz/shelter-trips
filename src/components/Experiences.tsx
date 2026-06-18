@@ -28,7 +28,7 @@ export default function Experiences() {
   return (
     <section className={styles.experiences} id="experiences">
       <div className={styles.container}>
-        <div className={styles.left}>
+        <div className={`${styles.left} reveal`}>
           <p className={styles.label}>
             <span className={styles.labelLine} />
             How We Travel
@@ -54,7 +54,7 @@ export default function Experiences() {
           </div>
         </div>
 
-        <div className={styles.right}>
+        <div className={`${styles.right} reveal revealDelay1`}>
           <div className={styles.imageGrid}>
             <div className={styles.img1} style={{ overflow: 'hidden' }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}

@@ -35,7 +35,7 @@ export default function Destinations() {
   return (
     <section className={styles.destinations} id="destinations">
       <div className={styles.container}>
-        <div className={styles.headerRow}>
+        <div className={`${styles.headerRow} reveal`}>
           <div>
             <p className={styles.label}>
               <span className={styles.labelLine} />
@@ -52,8 +52,8 @@ export default function Destinations() {
         </div>
 
         <div className={styles.grid}>
-          {destinations.map((dest) => (
-            <a key={dest.id} href="#contact" className={styles.card} id={`dest-${dest.id}`}>
+          {destinations.map((dest, index) => (
+            <a key={dest.id} href="#contact" className={`${styles.card} reveal ${index % 4 === 0 ? '' : 'revealDelay' + (index % 4)}`} id={`dest-${dest.id}`}>
               <div className={styles.cardImg}>
                 <img src={dest.img} alt={dest.name} className={styles.image} />
                 <div className={styles.cardOverlay} />

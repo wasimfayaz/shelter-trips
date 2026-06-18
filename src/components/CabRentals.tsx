@@ -35,7 +35,7 @@ export default function CabRentals() {
   return (
     <section className={styles.cabs} id="cabs">
       {/* Red Promo Banner */}
-      <div className={styles.promoBanner} id="cab-promo-banner">
+      <div className={`${styles.promoBanner} reveal`} id="cab-promo-banner">
         <div className={styles.bannerContainer}>
           <span className={styles.bannerText}>
             Kashmir taxi service – Book online taxi service in Kashmir with Shelter Trips
@@ -48,8 +48,8 @@ export default function CabRentals() {
 
       <div className={styles.container}>
         <div className={styles.grid}>
-          {cabList.map((cab) => (
-            <article key={cab.id} className={styles.card} id={`cab-${cab.id}`}>
+          {cabList.map((cab, index) => (
+            <article key={cab.id} className={`${styles.card} reveal ${index % 2 === 0 ? '' : 'revealDelay1'}`} id={`cab-${cab.id}`}>
               <div className={styles.cardImage}>
                 <div className="imagePlaceholder" style={{ height: '100%', minHeight: '180px' }}>
                   <span>Placeholder: {cab.type} Vehicle Image</span>

@@ -55,7 +55,7 @@ export default function Packages() {
   return (
     <section className={styles.packages} id="packages">
       <div className={styles.container}>
-        <div className={styles.header}>
+        <div className={`${styles.header} reveal`}>
           <p className={styles.label}>
             <span className={styles.labelLine} />
             Exclusive Deals
@@ -71,8 +71,8 @@ export default function Packages() {
         </div>
 
         <div className={styles.grid}>
-          {packagesList.map((pkg) => (
-            <article key={pkg.id} className={styles.card} id={`pkg-${pkg.id}`}>
+          {packagesList.map((pkg, index) => (
+            <article key={pkg.id} className={`${styles.card} reveal ${index % 3 === 0 ? '' : 'revealDelay' + (index % 3)}`} id={`pkg-${pkg.id}`}>
               <div className={styles.cardImage}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={pkg.image} alt={pkg.tag} className={styles.image} />

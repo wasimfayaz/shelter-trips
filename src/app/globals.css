@@ -252,3 +252,33 @@ ul, ol {
     --section-padding: 60px;
   }
 }
+
+/* Scroll Reveal Animations - GPU Optimized */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform, opacity;
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.revealSlow {
+  transition-duration: 1.4s;
+}
+
+.revealDelay1 {
+  transition-delay: 0.15s;
+}
+
+.revealDelay2 {
+  transition-delay: 0.3s;
+}
+
+.revealDelay3 {
+  transition-delay: 0.45s;
+}
+

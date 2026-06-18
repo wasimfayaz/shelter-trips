@@ -26,7 +26,7 @@ export default function Contact() {
   return (
     <section className={styles.contact} id="contact">
       <div className={styles.container}>
-        <div className={styles.left}>
+        <div className={`${styles.left} reveal`}>
           <p className={styles.label}>
             <span className={styles.labelLine} />
             Start Planning
@@ -87,7 +87,7 @@ export default function Contact() {
           </div>
         </div>
 
-        <div className={styles.right}>
+        <div className={`${styles.right} reveal revealDelay1`}>
           {sent ? (
             <div className={styles.successMsg} id="form-success">
               <div className={styles.successIcon}>✓</div>

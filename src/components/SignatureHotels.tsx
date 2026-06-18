@@ -34,7 +34,7 @@ export default function SignatureHotels() {
   return (
     <section className={styles.hotels} id="hotels">
       <div className={styles.container}>
-        <div className={styles.header}>
+        <div className={`${styles.header} reveal`}>
           <p className={styles.label}>
             <span className={styles.labelLine} />
             Our Properties
@@ -50,8 +50,8 @@ export default function SignatureHotels() {
         </div>
 
         <div className={styles.grid}>
-          {hotelList.map((hotel) => (
-            <article key={hotel.id} className={styles.card} id={`hotel-${hotel.id}`}>
+          {hotelList.map((hotel, index) => (
+            <article key={hotel.id} className={`${styles.card} reveal ${index % 3 === 0 ? '' : 'revealDelay' + (index % 3)}`} id={`hotel-${hotel.id}`}>
               <div className={styles.cardImage}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={hotel.image} alt={hotel.title} className={styles.image} />

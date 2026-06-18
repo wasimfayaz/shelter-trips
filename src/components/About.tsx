@@ -4,7 +4,7 @@ export default function About() {
   return (
     <section className={styles.about} id="about">
       <div className={styles.container}>
-        <div className={styles.left}>
+        <div className={`${styles.left} reveal`}>
           <div className={styles.imageStack}>
             <div className={styles.imgMain} style={{ overflow: 'hidden' }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -21,7 +21,7 @@ export default function About() {
           </div>
         </div>
 
-        <div className={styles.right}>
+        <div className={`${styles.right} reveal revealDelay1`}>
           <p className={styles.sectionLabel}>
             <span className={styles.labelLine} />
             Our Story
