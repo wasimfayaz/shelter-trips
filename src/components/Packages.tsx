@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styles from './Packages.module.css';
 
 const packagesList = [
@@ -122,9 +123,9 @@ export default function Packages() {
                 </div>
 
                 <div className={styles.cardFooter}>
-                  <a href="#contact" className={styles.btnEnquire} id={`pkg-enq-${pkg.id}`}>
-                    Enquire Now
-                  </a>
+                  <Link href={`/packages/${pkg.id}`} className={styles.btnEnquire} id={`pkg-enq-${pkg.id}`}>
+                    View Details
+                  </Link>
                   <a 
                     href="https://wa.me/919103662018" 
                     className={styles.btnWhatsapp} 

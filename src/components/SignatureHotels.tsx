@@ -1,4 +1,35 @@
+import Link from 'next/link';
 import styles from './SignatureHotels.module.css';
+
+const hotelProperties = [
+  {
+    id: 'shelter-group-houseboats',
+    name: 'The Shelter Group of Houseboats',
+    tag: '5★ Deluxe Houseboat',
+    desc: 'Bespoke cedarwood houseboats offering hand-carved luxury and scenic tranquility on the waters of Srinagar.',
+    location: 'Dal Lake, Srinagar',
+    price: '₹5,999',
+    img: '/hotels/shelter group of houseboats.webp',
+  },
+  {
+    id: 'shelter-heritage',
+    name: 'Hotel Shelter Heritage',
+    tag: '4★ Boutique Hotel',
+    desc: 'Classic Kashmiri architecture combined with modern hospitality, situated in the heart of Srinagar city.',
+    location: 'Srinagar, Kashmir',
+    price: '₹4,999',
+    img: '/hotels/sheter heritage.webp',
+  },
+  {
+    id: 'wonder-hills',
+    name: 'Hotel Wonder Hills',
+    tag: '4★ Alpine Resort',
+    desc: 'Cozy pinewood resort overlooking snow-capped peaks and the roaring Lidder River valley in Pahalgam.',
+    location: 'Pahalgam, Kashmir',
+    price: '₹5,999',
+    img: '/hotels/wonder hills.webp',
+  },
+];
 
 const partners = [
   { id: 'vivanta', name: 'Vivanta', img: 'https://dialusback.com/wp-content/uploads/2024/08/Vivanta-new.png' },
@@ -30,15 +61,56 @@ export default function SignatureHotels() {
   return (
     <section className={styles.hotels} id="hotels">
       <div className={styles.container}>
+        {/* Signature Stays Grid */}
+        <div className="reveal" style={{ marginBottom: '56px' }}>
+          <p className={styles.partnersLabel} style={{ justifyContent: 'flex-start' }}>Signature Stays</p>
+          <h2 className={styles.partnersTitle} style={{ textAlign: 'left', marginBottom: '24px', letterSpacing: '-0.02em' }}>
+            Shelter Group <em>Stays</em>
+          </h2>
+          <p style={{ color: '#6a6a6a', fontSize: '15px', maxWidth: '600px', fontWeight: '300', fontFamily: 'var(--font-sans)', lineHeight: '1.8' }}>
+            We host guests in our own curated signature properties. Experience heritage wood carvings on Dal Lake or fresh pine breezes in Pahalgam.
+          </p>
+        </div>
+
+        <div className={styles.grid} style={{ marginBottom: '100px' }}>
+          {hotelProperties.map((hotel) => (
+            <article key={hotel.id} className={`${styles.card} reveal`} id={`hotel-${hotel.id}`}>
+              <div className={styles.cardImage}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={hotel.img} alt={hotel.name} className={styles.image} />
+                <span className={styles.cardTag}>{hotel.tag}</span>
+              </div>
+              <div className={styles.cardBody}>
+                <h3 className={styles.cardTitle}>{hotel.name}</h3>
+                <p className={styles.cardDesc}>{hotel.desc}</p>
+                <div className={styles.cardMeta}>
+                  <div className={styles.location}>
+                    <span className={styles.locIcon}>📍</span>
+                    <span className={styles.locText}>{hotel.location}</span>
+                  </div>
+                  <div className={styles.price}>
+                    <span className={styles.priceLabel}>Starting From</span>
+                    <span className={styles.priceValue}>{hotel.price}</span>
+                  </div>
+                </div>
+                <Link href={`/hotels/${hotel.id}`} className={styles.btnBook} id={`hotel-btn-${hotel.id}`} style={{ borderRadius: '30px' }}>
+                  View Rooms & Suites
+                </Link>
+              </div>
+            </article>
+          ))}
+        </div>
+
+        {/* Partners Marquee */}
         <div className={`${styles.partnersSection} reveal`}>
-          <p className={styles.partnersLabel}>Hotels, Houseboats & Resorts</p>
+          <p className={styles.partnersLabel}>Hospitality Partners</p>
           <h2 className={styles.partnersTitle}>OUR HOSPITALITY PARTNERS</h2>
           
           <div className={styles.marqueeContainer}>
             <div className={styles.marqueeTrack}>
               {[...partners, ...partners].map((partner, index) => (
                 <a 
-                  href="#contact" 
+                  href="/#contact" 
                   key={`${partner.id}-${index}`} 
                   className={styles.logoItem} 
                   id={`partner-${partner.id}-${index}`}

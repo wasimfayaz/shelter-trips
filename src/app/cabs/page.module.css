@@ -1,0 +1,571 @@
+.main {
+  background: var(--white);
+  min-height: 100vh;
+}
+
+.hero {
+  height: 40vh;
+  min-height: 320px;
+  background-color: var(--black);
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 100px 0 60px;
+  color: var(--white);
+}
+
+.heroContent {
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 80px;
+}
+
+.heroTag {
+  display: inline-block;
+  border: 1px solid rgba(250, 250, 250, 0.4);
+  color: var(--gray-300);
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border-radius: 30px;
+  margin-bottom: 20px;
+}
+
+.heroTitle {
+  font-family: var(--font-serif);
+  font-size: clamp(28px, 3.5vw, 46px);
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+}
+
+.heroDesc {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--gray-400);
+  line-height: 1.8;
+  max-width: 600px;
+}
+
+/* Promo Banner */
+.promoBanner {
+  background: var(--black);
+  color: var(--white);
+  padding: 20px 0;
+  width: 100%;
+  border-bottom: 1px solid var(--gray-800);
+}
+
+.bannerContainer {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 80px;
+  text-align: center;
+}
+
+.bannerText {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+/* Fleet Listing Section */
+.fleetSection {
+  padding: 80px 0;
+  background: #ffffff;
+}
+
+.sectionHeader {
+  margin-bottom: 56px;
+}
+
+.sectionLabel {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gray-500);
+  margin-bottom: 16px;
+}
+
+.labelLine {
+  display: block;
+  width: 32px;
+  height: 1px;
+  background: var(--gray-400);
+}
+
+.sectionTitle {
+  font-family: var(--font-serif);
+  font-size: clamp(24px, 3vw, 36px);
+  font-weight: 500;
+  color: var(--black);
+}
+
+/* Grid & Vehicle Cards */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid rgba(10, 10, 10, 0.08);
+  border-radius: 16px;
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              box-shadow 0.4s ease,
+              border-color 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 48px rgba(10, 10, 10, 0.06);
+  border-color: rgba(10, 10, 10, 0.15);
+}
+
+.cardHeader {
+  margin-bottom: 16px;
+}
+
+.cabTag {
+  display: inline-block;
+  background: rgba(191, 163, 112, 0.1);
+  color: #bfa370;
+  font-family: var(--font-sans);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.cardTitle {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--black);
+  margin-top: 4px;
+}
+
+.cardDesc {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--gray-600);
+  line-height: 1.65;
+  margin-bottom: 24px;
+  flex: 1;
+}
+
+/* Rates Display */
+.ratesBox {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: var(--gray-100);
+  padding: 16px 20px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+.rateRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rateLabel {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--gray-500);
+}
+
+.rateValue {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--black);
+}
+
+/* Routes List */
+.routesBox {
+  margin-bottom: 28px;
+  border-top: 1px solid var(--gray-200);
+  padding-top: 16px;
+}
+
+.routesTitle {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--black);
+  margin-bottom: 12px;
+  display: block;
+}
+
+.routesList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.routeItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.routeName {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  color: var(--gray-600);
+}
+
+.routePrice {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--black);
+}
+
+.cardFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--gray-200);
+  padding-top: 20px;
+}
+
+.seats {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--gray-500);
+}
+
+.bookBtn {
+  background: var(--black);
+  color: var(--white);
+  border: 1px solid var(--black);
+  padding: 10px 24px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.bookBtn:hover {
+  background: transparent;
+  color: var(--black);
+}
+
+/* Form Section */
+.formSection {
+  background: var(--gray-100);
+  padding: 100px 0;
+  border-top: 1px solid var(--gray-200);
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1.2fr 1.8fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.formText {
+  display: flex;
+  flex-direction: column;
+}
+
+.formTitle {
+  font-family: var(--font-serif);
+  font-size: clamp(24px, 3vw, 36px);
+  font-weight: 500;
+  line-height: 1.25;
+  color: var(--black);
+  margin-bottom: 20px;
+}
+
+.formDesc {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--gray-600);
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+.contactDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.contactIcon {
+  font-size: 18px;
+  width: 44px;
+  height: 44px;
+  background: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.contactLabel {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--gray-400);
+  margin-bottom: 2px;
+}
+
+.contactValue {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--black);
+}
+
+/* Booking Form Container */
+.formContainer {
+  background: #ffffff;
+  border: 1px solid rgba(10, 10, 10, 0.08);
+  border-radius: 20px;
+  padding: 44px;
+  box-shadow: 0 24px 64px rgba(10, 10, 10, 0.04);
+}
+
+.successCard {
+  text-align: center;
+  padding: 24px 0;
+}
+
+.successIcon {
+  width: 60px;
+  height: 60px;
+  background: #25D366;
+  color: var(--white);
+  border-radius: 50%;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+}
+
+.successCard h3 {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.successCard p {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  color: var(--gray-500);
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.resetBtn {
+  background: var(--black);
+  color: var(--white);
+  padding: 12px 28px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 30px;
+  transition: opacity var(--transition);
+}
+
+.resetBtn:hover {
+  opacity: 0.9;
+}
+
+.glassForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.inputGroup label {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gray-500);
+}
+
+.inputRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.inputField {
+  background: var(--gray-100);
+  border: 1px solid transparent;
+  padding: 12px 16px;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  color: var(--black);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.inputField:focus {
+  outline: none;
+  background: #ffffff;
+  border-color: var(--black);
+  box-shadow: 0 4px 12px rgba(10, 10, 10, 0.03);
+}
+
+textarea.inputField {
+  resize: vertical;
+}
+
+.submitBtn {
+  background: var(--black);
+  color: var(--white);
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 15px;
+  border-radius: 30px;
+  transition: opacity var(--transition);
+  text-align: center;
+  margin-top: 8px;
+}
+
+.submitBtn:hover {
+  opacity: 0.9;
+}
+
+.orDivider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--gray-400);
+}
+
+.orDivider::before, .orDivider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.orDivider::before {
+  margin-right: 12px;
+}
+
+.orDivider::after {
+  margin-left: 12px;
+}
+
+.whatsappBtn {
+  background: #25D366;
+  color: var(--white);
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 14px;
+  border-radius: 30px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity var(--transition);
+}
+
+.whatsappBtn:hover {
+  opacity: 0.9;
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 48px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .formGrid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 24px;
+  }
+  .hero {
+    height: auto;
+    padding: 140px 0 60px;
+  }
+  .fleetSection, .formSection {
+    padding: 60px 0;
+  }
+  .formContainer {
+    padding: 24px;
+  }
+}

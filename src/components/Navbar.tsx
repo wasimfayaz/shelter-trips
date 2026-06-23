@@ -1,15 +1,16 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import styles from './Navbar.module.css';
 
 const navLinks = [
-  { label: 'Packages', href: '#packages' },
-  { label: 'Destinations', href: '#destinations' },
-  { label: 'Hotels', href: '#hotels' },
-  { label: 'Cabs', href: '#cabs' },
-  { label: 'About', href: '#about' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Packages', href: '/#packages' },
+  { label: 'Destinations', href: '/#destinations' },
+  { label: 'Hotels', href: '/#hotels' },
+  { label: 'Cabs', href: '/cabs' },
+  { label: 'About', href: '/#about' },
+  { label: 'Contact', href: '/#contact' },
 ];
 
 export default function Navbar() {
@@ -25,30 +26,30 @@ export default function Navbar() {
   return (
     <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`} id="navbar">
       <div className={styles.container}>
-        <a href="#" className={styles.logo} id="nav-logo">
+        <Link href="/" className={styles.logo} id="nav-logo">
           <span className={styles.logoText}>Shelter</span>
           <span className={styles.logoSub}>Trips</span>
-        </a>
+        </Link>
 
         <ul className={`${styles.links} ${menuOpen ? styles.open : ''}`}>
           {navLinks.map((link) => (
             <li key={link.label}>
-              <a
+              <Link
                 href={link.href}
                 className={styles.link}
                 onClick={() => setMenuOpen(false)}
                 id={`nav-${link.label.toLowerCase()}`}
               >
                 {link.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
 
         <div className={styles.navActions}>
-          <a href="#contact" className={styles.ctaBtn} id="nav-cta">
+          <Link href="/#contact" className={styles.ctaBtn} id="nav-cta">
             Book a Trip
-          </a>
+          </Link>
           <button
             className={`${styles.burger} ${menuOpen ? styles.burgerActive : ''}`}
             onClick={() => setMenuOpen(!menuOpen)}
@@ -65,7 +66,7 @@ export default function Navbar() {
       {menuOpen && (
         <div className={styles.mobileMenu} id="mobile-menu">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.label}
               href={link.href}
               className={styles.mobileLink}
@@ -73,11 +74,11 @@ export default function Navbar() {
               id={`mobile-nav-${link.label.toLowerCase()}`}
             >
               {link.label}
-            </a>
+            </Link>
           ))}
-          <a href="#contact" className={styles.mobileCta} id="mobile-nav-cta">
+          <Link href="/#contact" className={styles.mobileCta} id="mobile-nav-cta">
             Book a Trip
-          </a>
+          </Link>
         </div>
       )}
     </nav>

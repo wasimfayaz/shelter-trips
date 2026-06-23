@@ -1,23 +1,24 @@
+import Link from 'next/link';
 import styles from './Footer.module.css';
 
 const footerLinks = {
   Packages: [
-    { label: 'Honeymoon Special', href: '#packages' },
-    { label: 'ABC Valley Excursion', href: '#packages' },
-    { label: 'Betaab Valley Tour', href: '#packages' },
-    { label: 'Customized Deals', href: '#contact' },
+    { label: 'Honeymoon Special', href: '/packages/honeymoon-special' },
+    { label: 'ABC Valley Excursion', href: '/packages/abc-valley' },
+    { label: 'Betaab Valley Tour', href: '/packages/betaab-valley' },
+    { label: 'Customized Deals', href: '/packages/design-package' },
   ],
   Destinations: [
-    { label: 'Srinagar', href: '#destinations' },
-    { label: 'Gulmarg', href: '#destinations' },
-    { label: 'Pahalgam', href: '#destinations' },
-    { label: 'Sonamarg', href: '#destinations' },
+    { label: 'Srinagar', href: '/#destinations' },
+    { label: 'Gulmarg', href: '/#destinations' },
+    { label: 'Pahalgam', href: '/#destinations' },
+    { label: 'Sonamarg', href: '/#destinations' },
   ],
   Services: [
-    { label: 'Houseboat Stays', href: '#hotels' },
-    { label: 'Heritage Hotels', href: '#hotels' },
-    { label: 'Car Rentals', href: '#cabs' },
-    { label: 'Private Transfers', href: '#cabs' },
+    { label: 'Houseboat Stays', href: '/hotels/shelter-group-houseboats' },
+    { label: 'Heritage Hotels', href: '/hotels/shelter-heritage' },
+    { label: 'Car Rentals', href: '/cabs' },
+    { label: 'Private Transfers', href: '/cabs' },
   ],
 };
 
@@ -28,10 +29,10 @@ export default function Footer() {
         {/* Top */}
         <div className={styles.top}>
           <div className={styles.brand}>
-            <div className={styles.logo}>
+            <Link href="/" className={styles.logo}>
               <span className={styles.logoText}>Shelter</span>
               <span className={styles.logoSub}>Trips</span>
-            </div>
+            </Link>
             <p className={styles.brandDesc}>
               Premium Kashmir travel experiences since 2015. Houseboats,
               heritage hotels, curated itineraries — all crafted with love
@@ -50,9 +51,9 @@ export default function Footer() {
                 <ul className={styles.linkList}>
                   {links.map((link) => (
                     <li key={link.label}>
-                      <a href={link.href} className={styles.link} id={`footer-${link.label.toLowerCase().replace(/\s/g, '-')}`}>
+                      <Link href={link.href} className={styles.link} id={`footer-${link.label.toLowerCase().replace(/\s/g, '-')}`}>
                         {link.label}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -69,9 +70,9 @@ export default function Footer() {
             © {new Date().getFullYear()} Shelter Trips. All rights reserved. · Srinagar, Kashmir, India
           </p>
           <div className={styles.bottomLinks}>
-            <a href="#" className={styles.bottomLink} id="footer-privacy">Privacy Policy</a>
-            <a href="#" className={styles.bottomLink} id="footer-terms">Terms of Service</a>
-            <a href="#contact" className={styles.bottomLink} id="footer-contact">Contact</a>
+            <Link href="/privacy" className={styles.bottomLink} id="footer-privacy">Privacy Policy</Link>
+            <Link href="/terms" className={styles.bottomLink} id="footer-terms">Terms of Service</Link>
+            <Link href="/#contact" className={styles.bottomLink} id="footer-contact">Contact</Link>
           </div>
         </div>
       </div>
