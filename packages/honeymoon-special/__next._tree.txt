@@ -1,3 +1,3 @@
 :HL["/_next/static/chunks/3b0oh6-7fkiw9.css","style"]
-:HL["/_next/static/chunks/3n2h2b-5uh9ub.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"packages","param":null,"prefetchHints":0,"slots":{"children":{"name":"id","param":{"type":"d","key":"honeymoon-special","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"xTOKv0wGHa4VchVB8cn_K"}
+:HL["/_next/static/chunks/1fw3v_x52_7aq.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"packages","param":null,"prefetchHints":0,"slots":{"children":{"name":"id","param":{"type":"d","key":"honeymoon-special","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"fc2rSSlSqjlPQv6L8jdTJ"}
