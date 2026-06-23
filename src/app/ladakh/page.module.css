@@ -451,12 +451,35 @@
 
 @media (max-width: 768px) {
   .hero {
-    height: 70vh;
+    height: 60vh;
+    min-height: 400px;
+  }
+  .heroContent {
+    padding: 0 24px;
+    margin-top: 60px;
   }
   .expGrid {
     grid-template-columns: 1fr;
   }
   .formContainer {
-    padding: 30px;
+    padding: 30px 20px;
+  }
+  .inputRow {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .conciergeGrid {
+    gap: 36px;
+  }
+  .gridStays {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    margin-bottom: 48px;
+  }
+  .cardBody {
+    padding: 24px;
+  }
+  .sectionHeader {
+    margin-bottom: 48px;
   }
 }

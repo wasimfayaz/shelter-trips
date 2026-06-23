@@ -604,6 +604,11 @@ textarea.inputField {
   .detailsSection {
     padding: 60px 0;
   }
+  .aboutPropertyGrid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding-bottom: 48px;
+  }
   .aboutActions {
     flex-wrap: wrap;
     gap: 20px;
@@ -612,6 +617,9 @@ textarea.inputField {
     grid-template-columns: 1fr;
   }
   .amenitiesGrid {
+    grid-template-columns: 1fr;
+  }
+  .inputRow {
     grid-template-columns: 1fr;
   }
 }

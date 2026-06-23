@@ -186,3 +186,20 @@
     gap: 16px;
   }
 }
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 18px;
+  }
+  .footer {
+    padding: 60px 0 32px;
+  }
+  .linksGrid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .brandDesc {
+    font-size: 13px;
+  }
+}
+

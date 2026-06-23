@@ -267,6 +267,13 @@
 
 /* Responsive adjustment */
 @media (max-width: 900px) {
+  .slowTravelGrid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .slowTravelImage {
+    padding: 0;
+  }
   .imgSecond {
     display: none;
   }
@@ -279,4 +286,22 @@
     top: 20px;
   }
 }
+
+@media (max-width: 640px) {
+  .slowTravel {
+    padding: 60px 0;
+  }
+  .imgMain {
+    height: 280px;
+  }
+  .title {
+    font-size: clamp(26px, 7vw, 36px);
+  }
+  .pillars {
+    margin-top: 28px;
+    padding-top: 28px;
+    gap: 16px;
+  }
+}
+
 

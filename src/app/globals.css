@@ -266,6 +266,19 @@ ul, ol {
   }
 }
 
+@media (max-width: 480px) {
+  .container {
+    padding: 0 18px;
+  }
+  :root {
+    --section-padding: 48px;
+  }
+  .section-title {
+    font-size: clamp(28px, 8vw, 44px);
+  }
+}
+
+
 /* Scroll Reveal Animations - GPU Optimized */
 .reveal {
   opacity: 0;

@@ -595,4 +595,33 @@ textarea.inputField {
   .formContainer {
     padding: 24px;
   }
+  .sectionHeader {
+    margin-bottom: 36px;
+  }
+  .inputRow {
+    grid-template-columns: 1fr;
+  }
 }
+
+@media (max-width: 480px) {
+  .container {
+    padding: 48px 18px;
+  }
+  .tableWrapper {
+    font-size: 12px;
+  }
+  .table th,
+  .table td {
+    padding: 10px 12px;
+  }
+  .formSection {
+    padding: 48px 0;
+  }
+  .formContainer {
+    padding: 20px 16px;
+  }
+  .sectionTitle {
+    font-size: clamp(20px, 6vw, 28px);
+  }
+}
+
