@@ -1,0 +1,211 @@
+.storytelling {
+  background-color: var(--white);
+}
+
+/* Slow Travel Section */
+.slowTravel {
+  padding: var(--section-padding) 0;
+  background-color: var(--gray-100);
+}
+
+.slowTravelGrid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.slowTravelImage {
+  position: relative;
+  padding: 20px;
+}
+
+.frameDecoration {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90%;
+  height: 90%;
+  border: 1px solid var(--gold-accent);
+  z-index: 0;
+}
+
+.imageWrapper {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+}
+
+.imgSlow {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 1.2s ease;
+}
+
+.slowTravelImage:hover .imgSlow {
+  transform: scale(1.04);
+}
+
+.slowTravelContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.goldLine {
+  width: 60px;
+  height: 1px;
+  background-color: var(--gold-accent);
+  margin-bottom: 32px;
+}
+
+.paragraph {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.9;
+  color: var(--gray-600);
+  margin-bottom: 24px;
+}
+
+.quoteBlock {
+  border-left: 2px solid var(--gold-accent);
+  padding-left: 24px;
+  margin-top: 24px;
+}
+
+.quote {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  font-style: italic;
+  line-height: 1.5;
+  color: var(--black);
+  margin-bottom: 8px;
+}
+
+.quoteAuthor {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold-accent);
+}
+
+/* Beyond Stays Section */
+.beyondStays {
+  padding: var(--section-padding) 0;
+  background-color: var(--white);
+}
+
+.beyondHeader {
+  max-width: 800px;
+  margin-bottom: 80px;
+}
+
+.beyondDesc {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.8;
+  color: var(--gray-500);
+  margin-top: 16px;
+}
+
+.expGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px 40px;
+}
+
+.expCard {
+  display: flex;
+  flex-direction: column;
+}
+
+.expImageContainer {
+  height: 380px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid var(--gray-200);
+  margin-bottom: 24px;
+}
+
+.expImageBg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.expCard:hover .expImageBg {
+  transform: scale(1.05);
+}
+
+.expCardBody {
+  display: flex;
+  flex-direction: column;
+}
+
+.expCardTag {
+  font-family: var(--font-sans);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  color: var(--gold-accent);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.expCardTitle {
+  font-family: var(--font-serif);
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  color: var(--black);
+  margin-bottom: 12px;
+}
+
+.expCardDesc {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.8;
+  color: var(--gray-600);
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .slowTravelGrid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  
+  .slowTravelImage {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .expImageContainer {
+    height: 320px;
+  }
+}
+
+@media (max-width: 768px) {
+  .expGrid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .slowTravelImage {
+    padding: 10px;
+  }
+
+  .expImageContainer {
+    height: 280px;
+  }
+}

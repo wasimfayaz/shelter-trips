@@ -1,140 +1,90 @@
 .hotels {
-  background: #fafafa;
-  padding: 80px 0;
+  background: var(--white);
+  padding: var(--section-padding) 0;
   border-top: 1px solid var(--gray-200);
 }
 
-.container {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 80px;
+.mainHeader {
+  max-width: 800px;
+  margin-bottom: 100px;
 }
 
-.partnersSection {
-  text-align: center;
-  padding: 12px 0;
+.mainDesc {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.8;
+  color: var(--gray-500);
+  margin-top: 16px;
 }
 
-.partnersLabel {
-  font-family: 'Inter', sans-serif;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-  color: #6a6a6a;
-  margin-bottom: 16px;
+/* Stays Collections Blocks */
+.collectionBlock {
+  position: relative;
+}
+
+.collectionTitleBox {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 12px;
+  gap: 20px;
+  margin-bottom: 50px;
 }
 
-.partnersLabel::before,
-.partnersLabel::after {
-  content: '';
-  display: block;
-  width: 24px;
-  height: 1px;
-  background: #d0d0d0;
+.collectionNum {
+  font-family: var(--font-serif);
+  font-size: 56px;
+  font-weight: 300;
+  color: var(--gold-accent);
+  line-height: 1;
 }
 
-.partnersTitle {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-size: clamp(24px, 3vw, 36px);
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  color: #0a0a0a;
-  margin-bottom: 48px;
-  text-transform: uppercase;
+.collectionTitle {
+  font-family: var(--font-serif);
+  font-size: 36px;
+  font-weight: 300;
+  letter-spacing: 0.01em;
+  color: var(--black);
 }
 
-.marqueeContainer {
-  overflow: hidden;
-  width: 100%;
-  white-space: nowrap;
-  position: relative;
-  padding: 10px 0;
-  mask-image: linear-gradient(to right, transparent, white 15%, white 85%, transparent);
-  -webkit-mask-image: linear-gradient(to right, transparent, white 15%, white 85%, transparent);
-}
-
-.marqueeTrack {
-  display: inline-flex;
-  align-items: center;
-  gap: 80px;
-  animation: logoMarquee 55s linear infinite;
-}
-
-.marqueeContainer:hover .marqueeTrack {
-  animation-play-state: paused;
-}
-
-@keyframes logoMarquee {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
-}
-
-.logoItem {
-  height: 120px;
-  width: 240px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.3s ease;
-  flex-shrink: 0;
-}
-
-.logoItem:hover {
-  transform: scale(1.08);
-}
-
-.logoImage {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-  opacity: 0.95;
-  filter: none;
-  transition: opacity 0.3s ease;
-}
-
-.logoItem:hover .logoImage {
-  opacity: 1;
+.collectionTitle em {
+  font-style: italic;
+  font-weight: 300;
+  color: var(--gold-accent);
 }
 
 /* Grid */
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
+  gap: 40px;
 }
 
 /* Card */
 .card {
-  background: #ffffff;
+  background: var(--white);
   border: 1px solid var(--gray-200);
   display: flex;
   flex-direction: column;
-  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-              box-shadow 0.4s ease;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1),
+              box-shadow 0.6s ease;
 }
 
 .card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+  transform: translateY(-8px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.04);
 }
 
 .cardImage {
   position: relative;
-  height: 260px;
+  height: 300px;
   overflow: hidden;
-  border-bottom: 1px solid var(--gray-200);
 }
 
 .image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .card:hover .image {
@@ -143,39 +93,40 @@
 
 .cardTag {
   position: absolute;
-  top: 16px;
-  left: 16px;
-  font-family: 'Inter', sans-serif;
+  top: 24px;
+  left: 24px;
+  font-family: var(--font-sans);
   font-size: 9px;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: #ffffff;
-  background: #0a0a0a;
-  padding: 6px 12px;
+  color: var(--white);
+  background: rgba(13, 13, 13, 0.85);
+  padding: 8px 16px;
+  z-index: 1;
 }
 
 .cardBody {
-  padding: 28px;
+  padding: 36px;
   display: flex;
   flex-direction: column;
   flex: 1;
 }
 
 .cardTitle {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-size: 22px;
-  font-weight: 600;
-  color: #0a0a0a;
-  margin-bottom: 16px;
-  line-height: 1.25;
+  font-family: var(--font-serif);
+  font-size: 24px;
+  font-weight: 300;
+  color: var(--black);
+  margin-bottom: 12px;
+  line-height: 1.2;
 }
 
 .cardDesc {
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-sans);
   font-size: 14px;
   font-weight: 300;
-  color: #555555;
+  color: var(--gray-600);
   line-height: 1.7;
   margin-bottom: 24px;
   flex: 1;
@@ -188,7 +139,7 @@
   align-items: center;
   margin-bottom: 24px;
   padding: 16px 0 0;
-  border-top: 1px solid var(--gray-200);
+  border-top: 1px solid var(--gray-100);
 }
 
 .location {
@@ -202,11 +153,11 @@
 }
 
 .locText {
-  font-family: 'Inter', sans-serif;
-  font-size: 11px;
+  font-family: var(--font-sans);
+  font-size: 10px;
   font-weight: 500;
   letter-spacing: 0.05em;
-  color: #666666;
+  color: var(--gray-500);
   text-transform: uppercase;
 }
 
@@ -217,19 +168,19 @@
 }
 
 .priceLabel {
-  font-family: 'Inter', sans-serif;
-  font-size: 9px;
+  font-family: var(--font-sans);
+  font-size: 8px;
   font-weight: 500;
-  color: #999999;
+  color: var(--gray-400);
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
 
 .priceValue {
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: 22px;
-  font-weight: 600;
-  color: #0a0a0a;
+  font-family: var(--font-serif);
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--black);
   line-height: 1.1;
   margin-top: 2px;
 }
@@ -238,49 +189,120 @@
 .btnBook {
   display: block;
   text-align: center;
-  background: var(--black);
-  color: var(--white);
-  font-family: 'Inter', sans-serif;
+  border: 1px solid var(--gray-300);
+  color: var(--black);
+  font-family: var(--font-sans);
   font-size: 11px;
   font-weight: 500;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   padding: 14px;
   transition: var(--transition);
 }
 
 .btnBook:hover {
-  background: var(--gray-800);
+  background: var(--black);
+  color: var(--white);
+  border-color: var(--black);
+}
+
+/* Partners Marquee */
+.partnersSection {
+  text-align: center;
+  border-top: 1px solid var(--gray-200);
+  padding-top: 80px;
+}
+
+.partnersTitle {
+  font-family: var(--font-serif);
+  font-size: clamp(28px, 3.5vw, 44px);
+  font-weight: 300;
+  color: var(--black);
+  margin-bottom: 64px;
+}
+
+.partnersTitle em {
+  font-style: italic;
+  font-weight: 300;
+  color: var(--gold-accent);
+}
+
+.marqueeContainer {
+  overflow: hidden;
+  width: 100%;
+  white-space: nowrap;
+  position: relative;
+  padding: 20px 0;
+  mask-image: linear-gradient(to right, transparent, white 15%, white 85%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, white 15%, white 85%, transparent);
+}
+
+.marqueeTrack {
+  display: inline-flex;
+  align-items: center;
+  gap: 80px;
+  animation: logoMarquee 45s linear infinite;
+}
+
+.marqueeContainer:hover .marqueeTrack {
+  animation-play-state: paused;
+}
+
+@keyframes logoMarquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.logoItem {
+  height: 60px;
+  width: 180px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.logoItem:hover {
+  transform: scale(1.05);
+}
+
+.logoImage {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  opacity: 0.4;
+  filter: grayscale(100%);
+  transition: opacity 0.4s ease, filter 0.4s ease;
+}
+
+.logoItem:hover .logoImage {
+  opacity: 0.85;
+  filter: grayscale(0%);
 }
 
 @media (max-width: 1100px) {
-  .container {
-    padding: 0 48px;
-  }
   .grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
+    gap: 30px;
   }
 }
 
 @media (max-width: 768px) {
-  .container {
-    padding: 0 24px;
-  }
   .grid {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-  .headerRow {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
-    margin-bottom: 40px;
+    grid-template-columns: 1fr !important;
+    gap: 30px;
   }
   .hotels {
-    padding: 80px 0;
+    padding: var(--section-padding) 0;
   }
   .cardImage {
-    height: 220px;
+    height: 250px;
+  }
+  .collectionTitle {
+    font-size: 28px;
+  }
+  .collectionNum {
+    font-size: 40px;
   }
 }

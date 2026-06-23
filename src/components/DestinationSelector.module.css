@@ -1,0 +1,157 @@
+.selector {
+  padding: var(--section-padding) 0;
+  background-color: var(--white);
+}
+
+.header {
+  max-width: 800px;
+  margin-bottom: 80px;
+}
+
+.subtitle {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.8;
+  color: var(--gray-500);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.card {
+  position: relative;
+  height: 600px;
+  overflow: hidden;
+  border: 1px solid var(--gray-200);
+  display: flex;
+  align-items: flex-end;
+  padding: 60px;
+  text-decoration: none;
+}
+
+.imageOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(13, 13, 13, 0.95) 0%,
+    rgba(13, 13, 13, 0.6) 40%,
+    rgba(13, 13, 13, 0.1) 100%
+  );
+  z-index: 1;
+  transition: opacity var(--transition);
+}
+
+.imageBg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  transition: transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.cardContent {
+  position: relative;
+  z-index: 2;
+  color: var(--white);
+  width: 100%;
+  transform: translateY(20px);
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.cardTag {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold-accent);
+  display: block;
+  margin-bottom: 12px;
+}
+
+.cardTitle {
+  font-family: var(--font-serif);
+  font-size: clamp(32px, 3.5vw, 48px);
+  font-weight: 300;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  margin-bottom: 20px;
+}
+
+.dividerLine {
+  width: 60px;
+  height: 1px;
+  background-color: var(--gold-accent);
+  margin-bottom: 24px;
+  transition: width 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.itemList {
+  margin-bottom: 32px;
+  opacity: 0.8;
+}
+
+.itemList li {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  line-height: 2;
+  color: var(--gray-200);
+}
+
+.exploreBtn {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  display: inline-block;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 4px;
+  transition: border-color 0.4s ease, color 0.4s ease;
+}
+
+/* Hover Effects */
+.card:hover .imageBg {
+  transform: scale(1.06);
+}
+
+.card:hover .cardContent {
+  transform: translateY(0);
+}
+
+.card:hover .dividerLine {
+  width: 120px;
+}
+
+.card:hover .exploreBtn {
+  color: var(--gold-accent);
+  border-color: var(--gold-accent);
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .card {
+    height: 500px;
+    padding: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .card {
+    height: 480px;
+    padding: 30px;
+  }
+}

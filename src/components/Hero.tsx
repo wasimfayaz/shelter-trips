@@ -10,7 +10,7 @@ export default function Hero() {
     travelers: '',
     arrivalDate: '',
     duration: '',
-    pickup: ''
+    destination: 'kashmir'
   });
   const [submitted, setSubmitted] = useState(false);
 
@@ -39,43 +39,43 @@ export default function Hero() {
 
       <div className={styles.content}>
         <div className={styles.left}>
+          <div className={styles.topMeta}>
+            <span className={styles.badge}>Himalayan Sanctuaries</span>
+          </div>
+
           <h1 className={styles.headline}>
-            <span className={styles.headlineMain}>The&nbsp;Valley</span>
-            <span className={styles.headlineItalic}>of Paradise</span>
-            <span className={styles.headlineAwaits}>Awaits You</span>
+            <span className={styles.headlineMain}>Kashmir & Ladakh’s</span>
+            <span className={styles.headlineItalic}>Most Extraordinary</span>
+            <span className={styles.headlineAwaits}>Escapes</span>
           </h1>
 
           <p className={styles.subtext}>
-            Bespoke Kashmir experiences — from floating palaces on Dal Lake to
-            snow-crowned peaks of Gulmarg. Crafted for those who seek the extraordinary.
+            Curated luxury stays, private mountain expeditions, and slow journeys through the high valleys of the Himalayas. Designed for the discerning traveller.
           </p>
 
           <div className={styles.ctas}>
-            <a href="#packages" className={styles.btnPrimary} id="hero-explore-packages">
-              <span>Explore Packages</span>
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
+            <a href="#destinations" className={styles.btnPrimary} id="hero-btn-dest">
+              <span>Explore Destinations</span>
             </a>
-            <a href="#contact" className={styles.btnSecondary} id="hero-plan-journey">
-              Plan My Journey
+            <a href="#hotels" className={styles.btnSecondary} id="hero-btn-stays">
+              View Collections
             </a>
           </div>
 
           <div className={styles.statsRow}>
             <div className={styles.stat}>
-              <span className={styles.statNum}>500<sup>+</sup></span>
-              <span className={styles.statLabel}>Happy Travellers</span>
+              <span className={styles.statNum}>5★</span>
+              <span className={styles.statLabel}>Luxury Rating</span>
             </div>
             <div className={styles.statDivider} />
             <div className={styles.stat}>
-              <span className={styles.statNum}>10</span>
-              <span className={styles.statLabel}>Years Experience</span>
+              <span className={styles.statNum}>100%</span>
+              <span className={styles.statLabel}>Bespoke Itineraries</span>
             </div>
             <div className={styles.statDivider} />
             <div className={styles.stat}>
-              <span className={styles.statNum}>4.9</span>
-              <span className={styles.statLabel}>Average Rating</span>
+              <span className={styles.statNum}>24/7</span>
+              <span className={styles.statLabel}>Onboard Host Service</span>
             </div>
           </div>
         </div>
@@ -85,104 +85,100 @@ export default function Hero() {
             {submitted ? (
               <div className={styles.formSuccess} id="hero-form-success">
                 <span className={styles.successIcon}>✓</span>
-                <h3>Request Sent!</h3>
-                <p>Your custom itinerary request has been received. Our team will reach out within 2 hours.</p>
+                <h3>Request Logged</h3>
+                <p>Your details have been routed to our private concierge desk. A dedicated travel host will contact you shortly.</p>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className={styles.form} id="hero-query-form">
+              <form onSubmit={handleSubmit} className={styles.form} id="hero-concierge-request">
                 <div className={styles.formHeader}>
-                  <div className={styles.formHeaderTitle}>
-                    <span className={styles.checkIcon}>✓</span>
-                    <h3>Get My Free Itinerary</h3>
-                  </div>
-                  <p className={styles.formHeaderSub}>100% free · No commitment · Reply within 2 hours</p>
+                  <h3>Private Concierge</h3>
+                  <p className={styles.formHeaderSub}>REQUEST A TAILORED JOURNEY</p>
                 </div>
 
                 <div className={styles.formInputs}>
                   <div className={styles.inputGroup}>
-                    <span className={styles.inputIcon}>👤</span>
                     <input
                       type="text"
                       name="name"
                       required
-                      placeholder="Enter your full name"
+                      placeholder="Your Full Name"
                       value={form.name}
                       onChange={handleChange}
                       className={styles.input}
+                      id="hero-input-name"
                     />
                   </div>
 
                   <div className={styles.inputGroup}>
-                    <span className={styles.inputIcon}>📞</span>
                     <input
                       type="tel"
                       name="phone"
                       required
-                      placeholder="+91 9876543210"
+                      placeholder="Phone / WhatsApp Number"
                       value={form.phone}
                       onChange={handleChange}
                       className={styles.input}
+                      id="hero-input-phone"
                     />
                   </div>
 
                   <div className={styles.inputRow}>
                     <div className={styles.inputGroup}>
-                      <span className={styles.inputIcon}>👥</span>
                       <input
                         type="text"
                         name="travelers"
-                        placeholder="No. of travelers"
+                        placeholder="Travelers Count"
                         value={form.travelers}
                         onChange={handleChange}
                         className={styles.input}
+                        id="hero-input-travelers"
                       />
                     </div>
                     <div className={styles.inputGroup}>
-                      <span className={styles.inputIcon}>📅</span>
                       <input
                         type="text"
                         name="arrivalDate"
-                        placeholder="Arrival date"
+                        placeholder="Arrival Date"
                         value={form.arrivalDate}
                         onChange={handleChange}
                         className={styles.input}
                         onFocus={(e) => e.target.type = 'date'}
                         onBlur={(e) => e.target.type = 'text'}
+                        id="hero-input-date"
                       />
                     </div>
                   </div>
 
-                  <div className={styles.inputGroup}>
-                    <span className={styles.inputIcon}>⏱</span>
-                    <input
-                      type="text"
-                      name="duration"
-                      placeholder="Trip duration (e.g. 5 Days)"
-                      value={form.duration}
-                      onChange={handleChange}
-                      className={styles.input}
-                    />
-                  </div>
-
-                  <div className={styles.inputGroup}>
-                    <span className={styles.inputIcon}>📍</span>
-                    <select
-                      name="pickup"
-                      value={form.pickup}
-                      onChange={handleChange}
-                      className={styles.input}
-                    >
-                      <option value="">Pick-up point</option>
-                      <option value="srinagar-airport">Srinagar Airport</option>
-                      <option value="jammu-station">Jammu Railway Station</option>
-                      <option value="custom">Other / Custom Location</option>
-                    </select>
+                  <div className={styles.inputRow}>
+                    <div className={styles.inputGroup}>
+                      <input
+                        type="text"
+                        name="duration"
+                        placeholder="Duration (e.g. 7 Days)"
+                        value={form.duration}
+                        onChange={handleChange}
+                        className={styles.input}
+                        id="hero-input-duration"
+                      />
+                    </div>
+                    <div className={styles.inputGroup}>
+                      <select
+                        name="destination"
+                        value={form.destination}
+                        onChange={handleChange}
+                        className={styles.input}
+                        id="hero-select-dest"
+                      >
+                        <option value="kashmir">Kashmir Valleys</option>
+                        <option value="ladakh">Ladakh Desert</option>
+                        <option value="both">Both Destinations</option>
+                      </select>
+                    </div>
                   </div>
                 </div>
 
                 <button type="submit" className={styles.formSubmitBtn} id="hero-form-submit">
-                  <span>GET MY FREE KASHMIR ITINERARY</span>
-                  <span className={styles.submitArrow}>➔</span>
+                  <span>Enquire Journey</span>
                 </button>
               </form>
             )}

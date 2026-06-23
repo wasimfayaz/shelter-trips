@@ -1,171 +1,122 @@
 .testimonials {
-  padding: 120px 0;
-  background: #fafafa;
-}
-
-.container {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 80px;
+  padding: var(--section-padding) 0;
+  background: var(--gray-100);
 }
 
 .headerRow {
   display: flex;
   align-items: flex-end;
-  gap: 48px;
-  margin-bottom: 72px;
-}
-
-.label {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-family: 'Inter', sans-serif;
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-  color: #6a6a6a;
-  margin-bottom: 20px;
-  white-space: nowrap;
-}
-
-.labelLine {
-  display: block;
-  width: 32px;
-  height: 1px;
-  background: #9a9a9a;
-}
-
-.title {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-size: clamp(32px, 3.5vw, 48px);
-  font-weight: 500;
-  line-height: 1.15;
-  letter-spacing: -0.02em;
-  color: #0a0a0a;
-  flex: 1;
-}
-
-.title em {
-  font-style: italic;
-  font-weight: 400;
+  gap: 60px;
+  margin-bottom: 80px;
 }
 
 .ratingBadge {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4px;
-  border-left: 1px solid #e8e8e8;
-  padding-left: 48px;
+  gap: 6px;
+  border-left: 1px solid var(--gray-200);
+  padding-left: 60px;
   flex-shrink: 0;
 }
 
 .ratingNum {
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: 52px;
-  font-weight: 600;
-  color: #0a0a0a;
+  font-family: var(--font-serif);
+  font-size: 56px;
+  font-weight: 300;
+  color: var(--black);
   line-height: 1;
-  letter-spacing: -0.03em;
 }
 
 .ratingStars {
   font-size: 14px;
-  color: #0a0a0a;
-  letter-spacing: 2px;
+  color: var(--gold-accent);
+  letter-spacing: 3px;
 }
 
 .ratingNote {
-  font-family: 'Inter', sans-serif;
-  font-size: 11px;
-  font-weight: 400;
-  letter-spacing: 0.1em;
+  font-family: var(--font-sans);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: #9a9a9a;
+  color: var(--gray-500);
 }
 
 /* Grid */
 .grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
 }
 
 /* Card */
 .card {
-  background: #fff;
-  border: 1px solid #e8e8e8;
-  padding: 40px;
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  padding: 48px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  transition: border-color 0.3s, box-shadow 0.3s;
+  gap: 24px;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1),
+              box-shadow 0.6s ease;
 }
 
 .card:hover {
-  border-color: #0a0a0a;
-  box-shadow: 4px 4px 0 #0a0a0a;
+  transform: translateY(-6px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.03);
 }
 
 .stars {
-  font-size: 13px;
-  color: #0a0a0a;
-  letter-spacing: 3px;
+  font-size: 12px;
+  color: var(--gold-accent);
+  letter-spacing: 4px;
 }
 
 .quote {
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: 19px;
-  font-weight: 400;
+  font-family: var(--font-serif);
+  font-size: 20px;
+  font-weight: 300;
   font-style: italic;
-  color: #2a2a2a;
-  line-height: 1.7;
+  color: var(--gray-800);
+  line-height: 1.6;
   flex: 1;
 }
 
 .author {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 16px;
-  padding-top: 20px;
-  border-top: 1px solid #f0f0f0;
+  padding-top: 24px;
+  border-top: 1px solid var(--gray-100);
 }
 
-.authorInitial {
-  width: 40px;
-  height: 40px;
-  background: #0a0a0a;
-  color: #fafafa;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Playfair Display', Georgia, serif;
-  font-size: 18px;
-  font-weight: 600;
-  flex-shrink: 0;
+.bullet {
+  color: var(--gold-accent);
+  font-size: 16px;
+  line-height: 1;
 }
 
 .authorName {
-  font-family: 'Inter', sans-serif;
-  font-size: 14px;
+  font-family: var(--font-sans);
+  font-size: 13px;
   font-weight: 500;
-  color: #0a0a0a;
-  margin-bottom: 2px;
-}
-
-.authorMeta {
-  font-family: 'Inter', sans-serif;
-  font-size: 11px;
-  font-weight: 300;
-  color: #9a9a9a;
+  color: var(--black);
+  margin-bottom: 4px;
   letter-spacing: 0.02em;
 }
 
+.authorMeta {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 300;
+  color: var(--gray-500);
+  line-height: 1.4;
+}
+
 @media (max-width: 1024px) {
-  .container {
-    padding: 0 48px;
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -177,7 +128,7 @@
   }
   .ratingBadge {
     border-left: none;
-    border-top: 1px solid #e8e8e8;
+    border-top: 1px solid var(--gray-200);
     padding-left: 0;
     padding-top: 32px;
     flex-direction: row;
@@ -187,16 +138,13 @@
 }
 
 @media (max-width: 768px) {
-  .container {
-    padding: 0 24px;
-  }
   .grid {
     grid-template-columns: 1fr;
   }
   .testimonials {
-    padding: 80px 0;
+    padding: var(--section-padding) 0;
   }
   .card {
-    padding: 28px;
+    padding: 36px;
   }
 }

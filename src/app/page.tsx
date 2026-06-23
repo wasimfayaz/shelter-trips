@@ -1,12 +1,12 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
+import DestinationSelector from '@/components/DestinationSelector';
 import Marquee from '@/components/Marquee';
 import About from '@/components/About';
+import EditorialStorytelling from '@/components/EditorialStorytelling';
 import Packages from '@/components/Packages';
-import Destinations from '@/components/Destinations';
 import SignatureHotels from '@/components/SignatureHotels';
 import CabRentals from '@/components/CabRentals';
-import Experiences from '@/components/Experiences';
 import Testimonials from '@/components/Testimonials';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
@@ -18,13 +18,13 @@ export default function Home() {
     <main>
       <Navbar />
       <Hero />
+      <DestinationSelector />
       <Marquee />
       <About />
+      <EditorialStorytelling />
       <Packages />
       <SignatureHotels />
       <CabRentals />
-      <Destinations />
-      <Experiences />
       <Testimonials />
       <Contact />
       <Footer />

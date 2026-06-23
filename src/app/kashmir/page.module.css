@@ -1,0 +1,462 @@
+.main {
+  background-color: var(--white);
+  min-height: 100vh;
+}
+
+.hero {
+  height: 80vh;
+  min-height: 600px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(13, 13, 13, 0.4) 0%,
+    rgba(13, 13, 13, 0.8) 100%
+  );
+  z-index: 1;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  color: var(--white);
+  text-align: center;
+  max-width: 900px;
+  padding: 0 40px;
+  margin-top: 80px;
+}
+
+.heroTag {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--gold-accent);
+  display: block;
+  margin-bottom: 24px;
+}
+
+.heroTitle {
+  font-family: var(--font-serif);
+  font-size: clamp(40px, 5vw, 76px);
+  font-weight: 300;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  margin-bottom: 24px;
+}
+
+.heroTitle em {
+  font-style: italic;
+  font-weight: 300;
+  color: var(--gold-accent);
+}
+
+.heroDesc {
+  font-family: var(--font-sans);
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.8;
+  color: var(--gray-200);
+}
+
+/* Editorial Stays */
+.staysSection {
+  padding: var(--section-padding) 0;
+  background-color: var(--white);
+}
+
+.sectionHeader {
+  max-width: 850px;
+  margin-bottom: 80px;
+}
+
+.gridStays {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  margin-bottom: 100px;
+}
+
+.card {
+  border: 1px solid var(--gray-200);
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.6s ease;
+}
+
+.cardImage {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.2s ease;
+}
+
+.card:hover .image {
+  transform: scale(1.04);
+}
+
+.cardTag {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  background-color: rgba(13, 13, 13, 0.85);
+  color: var(--white);
+  font-family: var(--font-sans);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 8px 16px;
+  z-index: 2;
+}
+
+.cardBody {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.cardTitle {
+  font-family: var(--font-serif);
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 1.2;
+  color: var(--black);
+  margin-bottom: 16px;
+}
+
+.cardDesc {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.8;
+  color: var(--gray-600);
+  margin-bottom: 24px;
+  flex-grow: 1;
+}
+
+.cardFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--gray-100);
+  padding-top: 24px;
+  margin-top: auto;
+}
+
+.price {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  color: var(--gray-500);
+  display: flex;
+  flex-direction: column;
+}
+
+.priceValue {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--black);
+}
+
+.btnBook {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--black);
+  border-bottom: 1px solid var(--black);
+  padding-bottom: 4px;
+  transition: color 0.4s ease, border-color 0.4s ease;
+}
+
+.btnBook:hover {
+  color: var(--gold-accent);
+  border-color: var(--gold-accent);
+}
+
+/* Experiences list */
+.expSection {
+  padding: var(--section-padding) 0;
+  background-color: var(--gray-100);
+}
+
+.expGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+}
+
+.expCard {
+  background-color: var(--white);
+  border: 1px solid var(--gray-200);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.expIcon {
+  font-size: 32px;
+  color: var(--gold-accent);
+  margin-bottom: 24px;
+}
+
+.expTitle {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 1.3;
+  margin-bottom: 16px;
+}
+
+.expDesc {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.8;
+  color: var(--gray-600);
+}
+
+/* Concierge Section */
+.conciergeSection {
+  padding: var(--section-padding) 0;
+  background-color: var(--black);
+  color: var(--white);
+  position: relative;
+}
+
+.conciergeGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.conciergeText {
+  display: flex;
+  flex-direction: column;
+}
+
+.conciergeTitle {
+  font-family: var(--font-serif);
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 300;
+  line-height: 1.15;
+  margin-bottom: 24px;
+}
+
+.conciergeTitle em {
+  font-style: italic;
+  font-weight: 300;
+  color: var(--gold-accent);
+}
+
+.conciergeDesc {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.9;
+  color: var(--gray-300);
+  margin-bottom: 40px;
+}
+
+.contactDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.contactIcon {
+  font-size: 24px;
+  color: var(--gold-accent);
+}
+
+.contactLabel {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gray-400);
+  display: block;
+}
+
+.contactValue {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  color: var(--white);
+}
+
+.formContainer {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 50px;
+}
+
+.formTitle {
+  font-family: var(--font-serif);
+  font-size: 26px;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.formSubtitle {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 300;
+  color: var(--gray-400);
+  text-align: center;
+  margin-bottom: 32px;
+  letter-spacing: 0.05em;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+}
+
+.inputGroup label {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gray-300);
+  margin-bottom: 8px;
+}
+
+.inputField {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--white);
+  padding: 14px 18px;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 300;
+  transition: border-color 0.4s ease;
+}
+
+.inputField::placeholder {
+  color: var(--gray-600);
+}
+
+.inputField:focus {
+  outline: none;
+  border-color: var(--gold-accent);
+}
+
+.inputRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.submitBtn {
+  width: 100%;
+  background-color: var(--gold-accent);
+  color: var(--black);
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 18px;
+  margin-top: 12px;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.submitBtn:hover {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.successCard {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.successIcon {
+  width: 60px;
+  height: 60px;
+  background-color: var(--gold-accent);
+  color: var(--black);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  margin: 0 auto 24px;
+}
+
+.successCard h3 {
+  font-family: var(--font-serif);
+  font-size: 24px;
+  font-weight: 300;
+  margin-bottom: 12px;
+}
+
+.successCard p {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--gray-300);
+  line-height: 1.8;
+  margin-bottom: 32px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .gridStays {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .expGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .conciergeGrid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 70vh;
+  }
+  .expGrid {
+    grid-template-columns: 1fr;
+  }
+  .formContainer {
+    padding: 30px;
+  }
+}
