@@ -1,0 +1,3 @@
+:HL["/_next/static/chunks/39e5n93z93uy2.css","style"]
+:HL["/_next/static/chunks/24abs04jimi9e.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"hotels","param":null,"prefetchHints":0,"slots":{"children":{"name":"id","param":{"type":"d","key":"shelter-heritage","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"4DutGquGFh382QiddjDOn"}
