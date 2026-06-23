@@ -6,12 +6,12 @@ import styles from './Navbar.module.css';
 
 const navLinks = [
   { label: 'Packages', href: '/#packages' },
-  { label: 'Destinations', href: '/#destinations' },
-  { label: 'Hotels', href: '/#hotels' },
-  { label: 'Cabs', href: '/cabs' },
-  { label: 'About', href: '/#about' },
+  { label: 'Cabs', href: '/#cabs' },
+  { label: 'Our Story', href: '/#story' },
   { label: 'Contact', href: '/#contact' },
 ];
+
+
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);

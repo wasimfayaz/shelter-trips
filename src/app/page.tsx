@@ -1,11 +1,8 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
-import DestinationSelector from '@/components/DestinationSelector';
 import Marquee from '@/components/Marquee';
-import About from '@/components/About';
 import EditorialStorytelling from '@/components/EditorialStorytelling';
 import Packages from '@/components/Packages';
-import SignatureHotels from '@/components/SignatureHotels';
 import CabRentals from '@/components/CabRentals';
 import Testimonials from '@/components/Testimonials';
 import Contact from '@/components/Contact';
@@ -18,12 +15,9 @@ export default function Home() {
     <main>
       <Navbar />
       <Hero />
-      <DestinationSelector />
       <Marquee />
-      <About />
       <EditorialStorytelling />
       <Packages />
-      <SignatureHotels />
       <CabRentals />
       <Testimonials />
       <Contact />
@@ -33,3 +27,4 @@ export default function Home() {
     </main>
   );
 }
+

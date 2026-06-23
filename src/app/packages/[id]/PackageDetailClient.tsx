@@ -9,12 +9,50 @@ import Link from 'next/link';
 import styles from './page.module.css';
 
 const packagesDetails: { [key: string]: any } = {
+  'signature-journey': {
+    title: 'THE SHELTER SIGNATURE JOURNEY',
+    duration: '7N 8D | PREMIUM COLLECTION',
+    routing: '2N Srinagar • 2N Gulmarg • 2N Pahalgam • 1N Houseboat',
+    tag: 'Signature Journey',
+    price: 'From ₹42,000 / Person',
+    image: 'https://images.pexels.com/photos/10701431/pexels-photo-10701431.jpeg',
+    highlights: [
+      '2 Nights at the premium Jhelum riverbank hotel',
+      'Private 4x4 transfers across mountain passes',
+      'Phase 1 & Phase 2 Gulmarg Gondola tickets pre-booked',
+      'Special 12-course slow-cooked Kashmiri Wazwan dinner',
+      'Sunset houseboat deck tea experience with local host'
+    ],
+    itinerary: [
+      { day: 'Day 1', title: 'Arrival in Srinagar & River Retreat stay', desc: 'Welcome to Kashmir. Transfer to your luxury boutique hotel on the Jhelum river bank. Enjoy a traditional Wazwan welcome dinner. Overnight in Srinagar.' },
+      { day: 'Day 2', title: 'Mughal Gardens Tour & High Tea', desc: 'Sightseeing of Shalimar and Nishat Gardens, followed by the Hazratbal Shrine. Evening sunset Shikara ride with high tea. Overnight in Srinagar.' },
+      { day: 'Day 3', title: 'Srinagar to Gulmarg Peak Transfer', desc: 'Drive to Gulmarg. Experience Asia\'s highest Gondola ride up to Apharwat peak (Phase 1 & 2 tickets included). Overnight in Gulmarg.' },
+      { day: 'Day 4', title: 'Gulmarg Meadows and Pine Trails', desc: 'Full day at leisure in Gulmarg. Optional skiing, pony riding, or trekking through the pine forest trails. Overnight in Gulmarg.' },
+      { day: 'Day 5', title: 'Gulmarg to Pahalgam (River Valley)', desc: 'Travel to Pahalgam. Enroute, visit saffron fields and Jhelum river ruins. Check-in to hotel. Overnight in Pahalgam.' },
+      { day: 'Day 6', title: 'Aru & Betaab Valleys Local Tour', desc: 'Embark on a private 4x4 cab tour of Aru Valley, Betaab Valley, and Chandanwari. Picnic lunch by the Lidder River. Overnight in Pahalgam.' },
+      { day: 'Day 7', title: 'Pahalgam to Srinagar Deluxe Houseboat', desc: 'Drive back to Srinagar. Check-in to a luxury hand-carved cedar houseboat. Relax on Nigeen Lake. Farewell candlelight dinner. Overnight on Houseboat.' },
+      { day: 'Day 8', title: 'Departure Transfer', desc: 'Breakfast on the houseboat. Transfer to Srinagar Airport.' }
+    ],
+    inclusions: [
+      '7 Nights accommodation in luxury boutique properties',
+      'Daily Breakfast and Dinner in all hotels',
+      'Sunset Shikara high tea experience',
+      'Gulmarg Gondola Phase 1 & 2 pre-booked tickets',
+      'Private 4x4 vehicle for all transit',
+      '12-Course traditional Kashmiri Wazwan dinner'
+    ],
+    exclusions: [
+      'Flights or train tickets to/from Srinagar',
+      'Lunches and personal expenditures',
+      'Pony rides or local portage charges'
+    ]
+  },
   'honeymoon-special': {
     title: 'ALL ABOUT SHELTER | HONEYMOON SPECIAL',
     duration: '6N 7D | PREMIUM PACKAGE',
     routing: '2N Srinagar • 1N Gulmarg • 2N Pahalgam • 1N Houseboat',
     tag: 'Honeymoon Special',
-    price: 'From ₹48,999 / Couple',
+    price: 'From ₹24,500 / Person',
     image: 'https://images.pexels.com/photos/7113990/pexels-photo-7113990.jpeg',
     highlights: [
       'Private 1-hour sunset Shikara Ride on Dal Lake',
@@ -55,7 +93,7 @@ const packagesDetails: { [key: string]: any } = {
     duration: '5N 6D | VALLEYS SPECIAL',
     routing: '2N Srinagar • 2N Pahalgam • 1N Houseboat',
     tag: 'Valley Excursion',
-    price: 'From ₹38,500 / Couple',
+    price: 'From ₹19,250 / Person',
     image: 'https://images.pexels.com/photos/27435043/pexels-photo-27435043.jpeg',
     highlights: [
       'Excursion to Aru, Betaab and Chandanwari valleys included',
@@ -91,7 +129,7 @@ const packagesDetails: { [key: string]: any } = {
     duration: '4N 5D | ADVENTURE TOUR',
     routing: '2N Srinagar • 1N Pahalgam • 1N Houseboat',
     tag: 'Meadow Tour',
-    price: 'From ₹31,000 / Couple',
+    price: 'From ₹15,500 / Person',
     image: 'https://images.pexels.com/photos/17488043/pexels-photo-17488043.jpeg',
     highlights: [
       'Free excursion to Betaab Valley',
@@ -124,7 +162,7 @@ const packagesDetails: { [key: string]: any } = {
     duration: '3N 4D | QUICK ESCAPE',
     routing: '1N Srinagar • 2N Houseboat',
     tag: 'Shikara Special',
-    price: 'From ₹24,999 / Couple',
+    price: 'From ₹12,500 / Person',
     image: 'https://images.pexels.com/photos/10701431/pexels-photo-10701431.jpeg',
     highlights: [
       '2 Nights on a deluxe houseboat on Dal Lake',
@@ -155,7 +193,7 @@ const packagesDetails: { [key: string]: any } = {
     duration: '5N 6D | CULTURAL TOUR',
     routing: '2N Srinagar • 1N Gulmarg • 1N Pahalgam • 1N Houseboat',
     tag: 'Cultural Escape',
-    price: 'From ₹42,000 / Couple',
+    price: 'From ₹21,000 / Person',
     image: 'https://images.pexels.com/photos/27468879/pexels-photo-27468879.jpeg',
     highlights: [
       'Complementary high-tea & supper at the iconic ChaiJai Tea Room',

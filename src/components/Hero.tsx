@@ -9,8 +9,7 @@ export default function Hero() {
     phone: '',
     travelers: '',
     arrivalDate: '',
-    duration: '',
-    destination: 'kashmir'
+    duration: ''
   });
   const [submitted, setSubmitted] = useState(false);
 
@@ -39,26 +38,45 @@ export default function Hero() {
 
       <div className={styles.content}>
         <div className={styles.left}>
+          
+          {/* Ladakh Redirect Segment */}
+          <div className={styles.ladakhRedirect}>
+            <span className={styles.redirectText}>Looking for Ladakh Packages?</span>
+            <a 
+              href="https://ladakhtourpackage.com" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className={styles.redirectLink}
+              id="hero-ladakh-redirect"
+            >
+              Visit ladakhtourpackage.com ➔
+            </a>
+          </div>
+
           <div className={styles.topMeta}>
-            <span className={styles.badge}>Himalayan Sanctuaries</span>
+            <span className={styles.badge}>
+              Himalayan Sanctuaries
+            </span>
           </div>
 
           <h1 className={styles.headline}>
-            <span className={styles.headlineMain}>Kashmir & Ladakh’s</span>
+            <span className={styles.headlineMain}>
+              Kashmir’s
+            </span>
             <span className={styles.headlineItalic}>Most Extraordinary</span>
             <span className={styles.headlineAwaits}>Escapes</span>
           </h1>
 
           <p className={styles.subtext}>
-            Curated luxury stays, private mountain expeditions, and slow journeys through the high valleys of the Himalayas. Designed for the discerning traveller.
+            Curated luxury stays, private mountain expeditions, and slow journeys through the valleys of paradise. Designed for the discerning traveller.
           </p>
 
           <div className={styles.ctas}>
-            <a href="#destinations" className={styles.btnPrimary} id="hero-btn-dest">
-              <span>Explore Destinations</span>
+            <a href="#packages" className={styles.btnPrimary} id="hero-btn-dest">
+              <span>View Kashmir Packages</span>
             </a>
-            <a href="#hotels" className={styles.btnSecondary} id="hero-btn-stays">
-              View Collections
+            <a href="#story" className={styles.btnSecondary} id="hero-btn-stays">
+              Our Story
             </a>
           </div>
 
@@ -149,31 +167,16 @@ export default function Hero() {
                     </div>
                   </div>
 
-                  <div className={styles.inputRow}>
-                    <div className={styles.inputGroup}>
-                      <input
-                        type="text"
-                        name="duration"
-                        placeholder="Duration (e.g. 7 Days)"
-                        value={form.duration}
-                        onChange={handleChange}
-                        className={styles.input}
-                        id="hero-input-duration"
-                      />
-                    </div>
-                    <div className={styles.inputGroup}>
-                      <select
-                        name="destination"
-                        value={form.destination}
-                        onChange={handleChange}
-                        className={styles.input}
-                        id="hero-select-dest"
-                      >
-                        <option value="kashmir">Kashmir Valleys</option>
-                        <option value="ladakh">Ladakh Desert</option>
-                        <option value="both">Both Destinations</option>
-                      </select>
-                    </div>
+                  <div className={styles.inputGroup}>
+                    <input
+                      type="text"
+                      name="duration"
+                      placeholder="Duration (e.g. 7 Days)"
+                      value={form.duration}
+                      onChange={handleChange}
+                      className={styles.input}
+                      id="hero-input-duration"
+                    />
                   </div>
                 </div>
 
@@ -193,3 +196,4 @@ export default function Hero() {
     </section>
   );
 }
+

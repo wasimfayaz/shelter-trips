@@ -69,6 +69,42 @@
   }
 }
 
+.ladakhRedirect {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(197, 168, 128, 0.15);
+  padding: 8px 20px;
+  margin-bottom: 36px;
+  border-radius: 40px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.redirectText {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.redirectLink {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--gold-accent);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.redirectLink:hover {
+  color: var(--white);
+}
+
+
 .topMeta {
   margin-bottom: 24px;
 }
@@ -413,6 +449,77 @@ select.input option {
   line-height: 1.7;
 }
 
+/* Form Switch */
+.formSwitch {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 28px;
+}
+
+.switchBtn {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  padding: 14px 8px;
+  color: rgba(255, 255, 255, 0.4);
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.switchBtn svg {
+  opacity: 0.4;
+  transition: opacity 0.3s ease, stroke 0.3s ease;
+  stroke: currentColor;
+}
+
+.switchBtn:hover {
+  color: var(--white);
+}
+
+.switchBtn:hover svg {
+  opacity: 0.8;
+}
+
+.activeSwitch {
+  color: var(--gold-accent) !important;
+  border-bottom-color: var(--gold-accent);
+}
+
+.activeSwitch svg {
+  opacity: 1 !important;
+  stroke: var(--gold-accent) !important;
+}
+
+.resetBtn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--white);
+  padding: 10px 24px;
+  font-size: 10px;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-top: 24px;
+  transition: all 0.3s ease;
+}
+
+.resetBtn:hover {
+  border-color: var(--white);
+  background: rgba(255, 255, 255, 0.05);
+}
+
 /* Responsive */
 @media (max-width: 1024px) {
   .hero {
@@ -450,6 +557,13 @@ select.input option {
 }
 
 @media (max-width: 768px) {
+  .ladakhRedirect {
+    flex-direction: column;
+    gap: 6px;
+    padding: 12px 20px;
+    text-align: center;
+    align-items: center;
+  }
   .hero {
     padding: 120px 0 60px;
   }

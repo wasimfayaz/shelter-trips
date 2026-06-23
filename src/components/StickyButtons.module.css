@@ -76,6 +76,20 @@
   color: #fafafa;
 }
 
+.cabBtn {
+  background: #ffffff;
+  color: #0a0a0a;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.cabBtn .iconWrapper {
+  color: #0a0a0a;
+}
+
+.cabBtn .label {
+  color: #0a0a0a;
+}
+
 .whatsappBtn {
   background: #25D366;
   color: #ffffff;

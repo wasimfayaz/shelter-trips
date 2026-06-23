@@ -1,13 +1,13 @@
 .cabs {
-  background: #ffffff;
-  padding-bottom: 120px;
+  background: var(--white);
+  padding: 0;
   border-top: 1px solid var(--gray-200);
 }
 
 /* Promo Banner */
 .promoBanner {
-  background: #0a0a0a;
-  color: #ffffff;
+  background: var(--black);
+  color: var(--white);
   padding: 24px 0;
   width: 100%;
   border-bottom: 1px solid var(--gray-800);
@@ -25,7 +25,7 @@
 }
 
 .bannerText {
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-sans);
   font-size: 14px;
   font-weight: 500;
   letter-spacing: 0.05em;
@@ -34,147 +34,565 @@
 
 .bannerBtn {
   display: inline-block;
-  border: 1.5px solid #ffffff;
+  background: transparent;
+  border: 1.5px solid var(--white);
   padding: 10px 28px;
   border-radius: 4px;
-  color: #ffffff;
-  font-family: 'Inter', sans-serif;
+  color: var(--white);
+  font-family: var(--font-sans);
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   transition: all 0.35s ease;
   white-space: nowrap;
+  cursor: pointer;
 }
 
 .bannerBtn:hover {
-  background: #ffffff;
-  color: #0a0a0a;
+  background: var(--white);
+  color: var(--black);
 }
 
 /* Grid & Cards */
 .container {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 80px 80px 0;
+  padding: 100px 80px;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
+.sectionHeader {
+  margin-bottom: 56px;
 }
 
-.card {
-  background: #ffffff;
+.sectionLabel {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gray-500);
+  margin-bottom: 16px;
+}
+
+.labelLine {
+  display: block;
+  width: 32px;
+  height: 1px;
+  background: var(--gray-400);
+}
+
+.sectionTitle {
+  font-family: var(--font-serif);
+  font-size: clamp(24px, 3vw, 36px);
+  font-weight: 500;
+  color: var(--black);
+}
+
+.tableWrapper {
+  width: 100%;
+  overflow-x: auto;
   border: 1px solid var(--gray-200);
+  border-radius: 4px;
+  background: var(--white);
+  margin-top: 40px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.table th {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--gray-600);
+  padding: 14px 18px;
+  border: 1px solid var(--gray-200);
+  background: var(--gray-50);
+}
+
+.table tr {
+  transition: background-color 0.2s ease;
+}
+
+.table tr:hover {
+  background-color: var(--gray-50);
+}
+
+.table td {
+  padding: 14px 18px;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  color: var(--gray-800);
+  vertical-align: middle;
+  border: 1px solid var(--gray-200);
+}
+
+.tableCabTag {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--black);
+  text-transform: uppercase;
+}
+
+.cabModelInfo {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  color: var(--gray-600);
+}
+
+.seatsCol {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--black);
+  white-space: nowrap;
+}
+
+.rateCol {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--black);
+  white-space: nowrap;
+}
+
+.actionCol {
+  white-space: nowrap;
+}
+
+.tableEnquireBtn {
+  background: var(--black);
+  color: var(--white);
+  border: 1px solid var(--black);
+  padding: 6px 14px;
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.tableEnquireBtn:hover {
+  background: var(--gray-800);
+  border-color: var(--gray-800);
+}
+
+/* Rates Display */
+.ratesBox {
   display: flex;
   flex-direction: column;
-  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-              box-shadow 0.4s ease;
+  gap: 8px;
+  background: var(--gray-100);
+  padding: 16px 20px;
+  border-radius: 8px;
+  margin-bottom: 24px;
 }
 
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+.rateRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.cardImage {
-  position: relative;
-  height: 180px;
-  overflow: hidden;
+.rateLabel {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--gray-500);
 }
 
-.cardImage :global(.imagePlaceholder) {
-  border: none;
-  border-bottom: 1px solid var(--gray-200);
-  transition: background-color var(--transition);
+.rateValue {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--black);
 }
 
-.card:hover .cardImage :global(.imagePlaceholder) {
-  background-color: #fafafa !important;
+/* Routes List */
+.routesBox {
+  margin-bottom: 28px;
+  border-top: 1px solid var(--gray-200);
+  padding-top: 16px;
 }
 
-.cardBody {
-  padding: 24px;
+.routesTitle {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--black);
+  margin-bottom: 12px;
+  display: block;
+}
+
+.routesList {
   display: flex;
   flex-direction: column;
-  flex: 1;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.cardTitle {
-  font-family: 'Inter', sans-serif;
+.routeItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.routeName {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  color: var(--gray-600);
+}
+
+.routePrice {
+  font-family: var(--font-sans);
   font-size: 12px;
   font-weight: 600;
-  letter-spacing: 0.06em;
-  color: #0a0a0a;
-  margin-bottom: 12px;
-  line-height: 1.4;
-}
-
-.cardDesc {
-  font-family: 'Inter', sans-serif;
-  font-size: 12px;
-  font-weight: 300;
-  color: #666666;
-  line-height: 1.6;
-  margin-bottom: 20px;
-  flex: 1;
+  color: var(--black);
 }
 
 .cardFooter {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 14px;
-  border-top: 1px solid #f0f0f0;
-  font-family: 'Inter', sans-serif;
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+  border-top: 1px solid var(--gray-200);
+  padding-top: 20px;
 }
 
 .seats {
-  color: #888888;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--gray-500);
 }
 
-.type {
-  color: #0a0a0a;
+.bookBtn {
+  background: var(--black);
+  color: var(--white);
+  border: 1px solid var(--black);
+  padding: 10px 24px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
+.bookBtn:hover {
+  background: transparent;
+  color: var(--black);
+}
+
+/* Form Section */
+.formSection {
+  background: var(--gray-100);
+  padding: 100px 0;
+  border-top: 1px solid var(--gray-200);
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1.2fr 1.8fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.formText {
+  display: flex;
+  flex-direction: column;
+}
+
+.formTitle {
+  font-family: var(--font-serif);
+  font-size: clamp(24px, 3vw, 36px);
+  font-weight: 500;
+  line-height: 1.25;
+  color: var(--black);
+  margin-bottom: 20px;
+}
+
+.formDesc {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--gray-600);
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+.contactDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.contactIcon {
+  font-size: 18px;
+  width: 44px;
+  height: 44px;
+  background: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.contactLabel {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--gray-400);
+  margin-bottom: 2px;
+}
+
+.contactValue {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--black);
+}
+
+/* Booking Form Container */
+.formContainer {
+  background: #ffffff;
+  border: 1px solid rgba(10, 10, 10, 0.08);
+  border-radius: 20px;
+  padding: 44px;
+  box-shadow: 0 24px 64px rgba(10, 10, 10, 0.04);
+}
+
+.successCard {
+  text-align: center;
+  padding: 24px 0;
+}
+
+.successIcon {
+  width: 60px;
+  height: 60px;
+  background: #25D366;
+  color: var(--white);
+  border-radius: 50%;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+}
+
+.successCard h3 {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.successCard p {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  color: var(--gray-500);
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.resetBtn {
+  background: var(--black);
+  color: var(--white);
+  padding: 12px 28px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 30px;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.resetBtn:hover {
+  opacity: 0.9;
+}
+
+.glassForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.inputGroup label {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gray-500);
+}
+
+.inputRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.inputField {
+  background: var(--gray-100);
+  border: 1px solid transparent;
+  padding: 12px 16px;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  color: var(--black);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.inputField:focus {
+  outline: none;
+  background: #ffffff;
+  border-color: var(--black);
+  box-shadow: 0 4px 12px rgba(10, 10, 10, 0.03);
+}
+
+textarea.inputField {
+  resize: vertical;
+}
+
+.submitBtn {
+  background: var(--black);
+  color: var(--white);
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 15px;
+  border-radius: 30px;
+  transition: opacity 0.3s ease;
+  text-align: center;
+  margin-top: 8px;
+  cursor: pointer;
+}
+
+.submitBtn:hover {
+  opacity: 0.9;
+}
+
+.orDivider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--gray-400);
+}
+
+.orDivider::before, .orDivider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.orDivider::before {
+  margin-right: 12px;
+}
+
+.orDivider::after {
+  margin-left: 12px;
+}
+
+.whatsappBtn {
+  background: #25D366;
+  color: var(--white);
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 14px;
+  border-radius: 30px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+  text-decoration: none;
+}
+
+.whatsappBtn:hover {
+  opacity: 0.9;
+}
+
+/* Responsive design */
 @media (max-width: 1200px) {
+  .container {
+    padding: 80px 48px;
+  }
   .grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 900px) {
-  .bannerContainer {
-    flex-direction: column;
-    text-align: center;
-    gap: 16px;
-    padding: 0 32px;
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr;
   }
-  .container {
-    padding: 48px 48px 0;
+  .formGrid {
+    grid-template-columns: 1fr;
+    gap: 40px;
   }
 }
 
 @media (max-width: 768px) {
   .container {
-    padding: 40px 24px 0;
+    padding: 60px 24px;
+  }
+  .promoBanner {
+    padding: 16px 0;
   }
   .bannerContainer {
     padding: 0 24px;
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
   }
-  .cabs {
-    padding-bottom: 80px;
+  .formSection {
+    padding: 60px 0;
   }
-}
-
-@media (max-width: 600px) {
-  .grid {
-    grid-template-columns: 1fr;
+  .formContainer {
+    padding: 24px;
   }
 }
