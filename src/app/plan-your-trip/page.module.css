@@ -1,0 +1,302 @@
+.landing {
+  min-height: 100vh;
+  background-color: #fafafa;
+  color: #0a0a0a;
+}
+
+/* Trust Bar / Hero Header */
+.trustBar {
+  background: #0a0a0a;
+  color: #fafafa;
+  padding: 110px 24px 36px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.trustBarInner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #e5c99f;
+}
+
+.trustHeading {
+  font-family: var(--font-serif);
+  font-size: clamp(26px, 3.5vw, 42px);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.trustHeading em {
+  font-style: italic;
+  font-weight: 400;
+  color: #e5c99f;
+}
+
+.trustSub {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: #a0a0a0;
+  max-width: 600px;
+  line-height: 1.7;
+}
+
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 24px;
+  margin-top: 12px;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: #d5d5d5;
+}
+
+.pillDot {
+  color: #25d366;
+  font-size: 14px;
+}
+
+/* Steps Section */
+.stepsSection {
+  padding: 80px 24px;
+  background: #ffffff;
+  border-top: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.sectionHeader {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 50px;
+}
+
+.sectionLabel {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #888888;
+  margin-bottom: 12px;
+}
+
+.sectionTitle {
+  font-family: var(--font-serif);
+  font-size: clamp(26px, 3vw, 36px);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: #0a0a0a;
+  line-height: 1.25;
+}
+
+.sectionTitle em {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.stepsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.stepCard {
+  background: #fafafa;
+  border: 1px solid #eaeaea;
+  padding: 36px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  position: relative;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.stepCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.05);
+}
+
+.stepNumber {
+  font-family: var(--font-serif);
+  font-size: 28px;
+  font-weight: 600;
+  color: #0a0a0a;
+  border-bottom: 2px solid #0a0a0a;
+  display: inline-block;
+  width: fit-content;
+  padding-bottom: 4px;
+}
+
+.stepCardTitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: #0a0a0a;
+}
+
+.stepCardDesc {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: #666666;
+  line-height: 1.7;
+}
+
+/* Why Book Section */
+.whySection {
+  padding: 90px 24px;
+  background: #f5f5f5;
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.featureCard {
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.featureIcon {
+  width: 44px;
+  height: 44px;
+  background: #0a0a0a;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  margin-bottom: 6px;
+}
+
+.featureTitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #0a0a0a;
+}
+
+.featureDesc {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  color: #666666;
+  line-height: 1.6;
+}
+
+/* Quick FAQs */
+.faqSection {
+  padding: 80px 24px;
+  background: #ffffff;
+  border-top: 1px solid #e8e8e8;
+}
+
+.faqGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+
+.faqItem {
+  background: #fafafa;
+  border: 1px solid #e8e8e8;
+  padding: 24px 28px;
+}
+
+.faqQuestion {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #0a0a0a;
+  margin-bottom: 8px;
+}
+
+.faqAnswer {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  color: #666666;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .featuresGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 860px) {
+  .stepsGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .faqGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .container {
+    padding: 0 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .featuresGrid {
+    grid-template-columns: 1fr;
+  }
+  .trustBar {
+    padding: 96px 16px 28px;
+  }
+  .pills {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+  .stepsSection,
+  .whySection,
+  .faqSection {
+    padding: 60px 16px;
+  }
+}
